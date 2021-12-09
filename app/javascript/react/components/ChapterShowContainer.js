@@ -42,10 +42,11 @@ const ChapterShowContainer = (props) => {
 // debugger
   return (
     <div>
-     {/* <a onClick={prev_page()}/>
-     <a onClick={next_page()}/>
-      {pages[page]} */}
-      <PageTile pages={chapterPages} pathName={props.location.pathname} hash={props.location.hash}/>
+
+      <PageTile pages={chapterPages}
+                pathName={props.location.pathname}
+                hash={props.location.hash}
+                totalPages={chapter.total_pages}/>
     </div>
   )
 }
