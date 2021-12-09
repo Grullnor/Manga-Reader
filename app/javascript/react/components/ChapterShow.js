@@ -1,4 +1,3 @@
-import { prev } from "cheerio/lib/api/traversing"
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
