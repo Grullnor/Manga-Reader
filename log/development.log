@@ -5494,3 +5494,27 @@ Processing by Api::V1::ChaptersController#show as */*
 Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 2.3ms | Allocations: 7599)
 
 
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-09 12:28:17 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 320)
+  Rendered layout layouts/application.html.erb (Duration: 3760.1ms | Allocations: 2880188)
+Completed 200 OK in 3774ms (Views: 3769.8ms | ActiveRecord: 0.0ms | Allocations: 2882596)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-09 12:28:21 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (2.0ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.6ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (67.29ms)
+Completed 200 OK in 203ms (Views: 78.0ms | ActiveRecord: 35.7ms | Allocations: 34333)
+
+
