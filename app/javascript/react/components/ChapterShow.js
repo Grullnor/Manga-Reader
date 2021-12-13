@@ -48,7 +48,7 @@ const PageTile = (props) => {
   if(page.page_number > 1){
     prevLink = <Link to={prevURL} onClick={prevPage}>prev</Link>
   }
-  if(page.page_number < props.totalPages){
+  if(parseInt(page.page_number) < parseInt(props.totalPages)){
     nextLink = <Link to={nextURL} onClick={nextPage}>next</Link>
   }
 

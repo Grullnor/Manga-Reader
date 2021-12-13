@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const ChapterTile = (props) => {
   return (
     <div>
-      <Link to={`/chapters/${props.name}/${props.chapter}#page_0`}>
+      <Link to={`/chapters/${props.name}/${props.chapter}#page_1`}>
           {props.title}
       </Link>
     </div>

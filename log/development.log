@@ -5978,3 +5978,512 @@ Processing by Api::V1::ChaptersController#show as */*
 Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 2.1ms | Allocations: 7601)
 
 
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-10 14:44:20 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211210190145_devise_create_users.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (3.6.0) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2021-12-10 14:44:33 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1315207269198642435)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20211210190145)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "user_name" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "last_read" character varying, "favorites" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211210190145"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1315207269198642435)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-10 14:44:34 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 101)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 9774.8ms | Allocations: 2959305)
+Completed 200 OK in 9781ms (Views: 9779.5ms | ActiveRecord: 0.0ms | Allocations: 2960837)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-10 14:44:44 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (1.1ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.3ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (2.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (74.39ms)
+Completed 200 OK in 223ms (Views: 95.4ms | ActiveRecord: 30.5ms | Allocations: 41834)
+
+
+Started GET "/comics" for ::1 at 2021-12-10 14:44:56 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 21058)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 21621)
+
+
+Started GET "/api/v1/comics" for ::1 at 2021-12-10 14:44:57 -0500
+Processing by Api::V1::ComicsController#index as */*
+  [1m[36mComic Load (0.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:3:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "Believe it", author: "idk", genres: "Shonnen", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2021-12-01 01:39:49.894499000 +0000", updated_at: "2021-12-01 01:39:49.894499000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.4ms | Allocations: 20036)
+
+
+Started GET "/api/v1/comics/Naruto" for ::1 at 2021-12-10 14:45:03 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"name"=>"Naruto"}
+  [1m[36mComic Load (1.0ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mChapter Load (0.3ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (5.0ms)
+Completed 200 OK in 17ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 5017)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-10 14:45:05 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (0.5ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (15.9ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 1.9ms | Allocations: 7919)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-10 14:45:18 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 21455)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 21723)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-10 14:45:18 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (0.8ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (19.81ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 2.4ms | Allocations: 7896)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 14:08:28 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 6384.3ms | Allocations: 99712)
+Completed 200 OK in 6394ms (Views: 6389.3ms | Allocations: 100204)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 14:08:36 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (3.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (3.3ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (8.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (51.31ms)
+Completed 200 OK in 187ms (Views: 51.9ms | ActiveRecord: 68.8ms | Allocations: 11725)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1315207269198642435)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLastReads (20211213210333)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.2ms)[0m  [1m[35mCREATE TABLE "last_reads" ("id" bigserial primary key, "name" character varying NOT NULL, "chapter" character varying NOT NULL, "page_number" character varying NOT NULL, "specific_page_url" character varying NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE INDEX "index_last_reads_on_user_id" ON "last_reads" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211213210333"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1315207269198642435)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:33:53 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1362)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 8994.2ms | Allocations: 2952240)
+Completed 200 OK in 9010ms (Views: 9004.7ms | ActiveRecord: 0.0ms | Allocations: 2958584)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:34:04 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (0.9ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (1.0ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (56.27ms)
+Completed 200 OK in 194ms (Views: 73.0ms | ActiveRecord: 24.4ms | Allocations: 43529)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:34:29 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 22656)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.0ms | Allocations: 23915)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:34:30 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (1.3ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (0.9ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (29.54ms)
+Completed 200 OK in 49ms (Views: 33.4ms | ActiveRecord: 3.1ms | Allocations: 8106)
+
+
+Started GET "/" for ::1 at 2021-12-13 16:34:31 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 21459)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms | Allocations: 21701)
+
+
+Started GET "/api/v1/comics" for ::1 at 2021-12-13 16:34:32 -0500
+Processing by Api::V1::ComicsController#index as */*
+  [1m[36mComic Load (0.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:3:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "Believe it", author: "idk", genres: "Shonnen", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2021-12-01 01:39:49.894499000 +0000", updated_at: "2021-12-01 01:39:49.894499000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (1.94ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.9ms | Allocations: 20143)
+
+
+Started GET "/api/v1/comics/Naruto" for ::1 at 2021-12-13 16:34:38 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"name"=>"Naruto"}
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mChapter Load (0.4ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (8.7ms)
+Completed 200 OK in 22ms (Views: 9.8ms | ActiveRecord: 1.2ms | Allocations: 5022)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:34:41 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (0.8ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (19.81ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 2.6ms | Allocations: 7940)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-12-13 16:34:43 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 636)
+  Rendered /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 38.6ms | Allocations: 9212)
+  Rendered layout layouts/application.html.erb (Duration: 76.5ms | Allocations: 29457)
+Completed 200 OK in 103ms (Views: 81.3ms | ActiveRecord: 5.6ms | Allocations: 37348)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-12-13 16:34:48 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 919)
+  Rendered /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 123)
+  Rendered /Users/raffisahagian/.gem/ruby/3.0.2/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3751)
+  Rendered layout layouts/application.html.erb (Duration: 121.6ms | Allocations: 31170)
+Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.0ms | Allocations: 32941)
+
+
+Started POST "/users" for ::1 at 2021-12-13 16:35:13 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"RaffiSahagian@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "raffisahagian@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "raffisahagian@gmail.com"], ["encrypted_password", "$2a$12$OgEfBjhpb9fXArzdDYSoZeVqBKj5bmB3ew8w5gF.MwAI8M2UNhTLW"], ["created_at", "2021-12-13 21:35:13.933795"], ["updated_at", "2021-12-13 21:35:13.933795"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 320ms (ActiveRecord: 6.7ms | Allocations: 16376)
+
+
+Started GET "/" for ::1 at 2021-12-13 16:35:13 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 22660)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.8ms | Allocations: 22941)
+
+
+Started GET "/api/v1/comics" for ::1 at 2021-12-13 16:35:14 -0500
+Processing by Api::V1::ComicsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:3:in `index'
+  [1m[36mComic Load (0.7ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:3:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "Believe it", author: "idk", genres: "Shonnen", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2021-12-01 01:39:49.894499000 +0000", updated_at: "2021-12-01 01:39:49.894499000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (0.44ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.5ms | Allocations: 2051)
+
+
+Started GET "/api/v1/comics/Naruto" for ::1 at 2021-12-13 16:35:26 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"name"=>"Naruto"}
+  [1m[36mComic Load (1.5ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mChapter Load (4.3ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (9.41ms)
+Completed 200 OK in 22ms (Views: 9.6ms | ActiveRecord: 6.5ms | Allocations: 2810)
+
+
+Started GET "/comics/Naruto" for ::1 at 2021-12-13 16:35:29 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 20926)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.5ms | Allocations: 21165)
+
+
+Started GET "/api/v1/comics/Naruto" for ::1 at 2021-12-13 16:35:30 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"name"=>"Naruto"}
+  [1m[36mComic Load (2.1ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mChapter Load (3.5ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:7:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (8.08ms)
+Completed 200 OK in 25ms (Views: 9.1ms | ActiveRecord: 6.8ms | Allocations: 2741)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:35:31 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.5ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.0ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (11.41ms)
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 3.4ms | Allocations: 8606)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:37:42 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 99)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 21993)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.3ms | Allocations: 23221)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:37:43 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.7ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.0ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (3.1ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (36.75ms)
+Completed 200 OK in 54ms (Views: 39.3ms | ActiveRecord: 5.5ms | Allocations: 10137)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:38:47 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 5176.9ms | Allocations: 91419)
+Completed 200 OK in 5180ms (Views: 5178.1ms | ActiveRecord: 0.9ms | Allocations: 91661)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:39:00 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (1.0ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.0ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (52.74ms)
+Completed 200 OK in 82ms (Views: 58.8ms | ActiveRecord: 11.6ms | Allocations: 8598)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:39:16 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 20920)
+Completed 200 OK in 66ms (Views: 65.5ms | ActiveRecord: 0.3ms | Allocations: 21160)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:39:19 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (0.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.7ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (1.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (24.36ms)
+Completed 200 OK in 43ms (Views: 29.7ms | ActiveRecord: 5.0ms | Allocations: 9243)
+
+
+Started GET "/chapters/Naruto/1" for ::1 at 2021-12-13 16:41:09 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Naruto", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 4711.9ms | Allocations: 81941)
+Completed 200 OK in 4715ms (Views: 4713.5ms | ActiveRecord: 0.5ms | Allocations: 82180)
+
+
+Started GET "/api/v1/chapters/Naruto?chapter=1" for ::1 at 2021-12-13 16:41:15 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Naruto"}
+  [1m[36mComic Load (1.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Naruto"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mChapter Load (1.1ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 1], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers]   [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:7:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (34.37ms)
+Completed 200 OK in 59ms (Views: 40.8ms | ActiveRecord: 4.6ms | Allocations: 9163)
+
+

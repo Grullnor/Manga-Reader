@@ -1,0 +1,2 @@
+class LastRead < ApplicationRecord
+end

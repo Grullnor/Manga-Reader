@@ -30,7 +30,6 @@ const ChapterShowContainer = (props) => {
     }
   }
 
-
   useEffect(() => {
     fetchData()
   }, [])
@@ -42,7 +41,6 @@ const ChapterShowContainer = (props) => {
 // debugger
   return (
     <div>
-
       <PageTile pages={chapterPages}
                 pathName={props.location.pathname}
                 hash={props.location.hash}
