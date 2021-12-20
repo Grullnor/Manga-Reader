@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/chapters', to: 'homes#index'
   get '/chapters/:name', to: 'homes#index'
   get '/chapters/:name/:id', to: 'homes#index'
+  get '/user_profile', to: 'homes#index'
 
   namespace :api do
     namespace :v1 do
@@ -20,6 +21,18 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :chapters, only: [:index, :show]
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:show]
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :bookmarks, only: [:create]
     end
   end
 

@@ -38,13 +38,14 @@ const ChapterShowContainer = (props) => {
       return {page_number: page.page_number, page_url: page.page_url}
   })
 
-// debugger
   return (
     <div>
       <PageTile pages={chapterPages}
                 pathName={props.location.pathname}
                 hash={props.location.hash}
-                totalPages={chapter.total_pages}/>
+                totalPages={chapter.total_pages}
+                // pageSave={handlePageSave()}
+                />
     </div>
   )
 }

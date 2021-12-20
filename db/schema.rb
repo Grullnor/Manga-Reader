@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 2021_12_13_210333) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookmarks", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "comic_photo_url", null: false
+    t.string "chapter", null: false
+    t.string "page_number", null: false
+    t.string "page_url", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
   create_table "chapters", force: :cascade do |t|
     t.string "title", null: false
     t.string "chapter_number", null: false
@@ -37,17 +49,6 @@ ActiveRecord::Schema.define(version: 2021_12_13_210333) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "last_reads", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "chapter", null: false
-    t.string "page_number", null: false
-    t.string "specific_page_url", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_last_reads_on_user_id"
-  end
-
   create_table "pages", force: :cascade do |t|
     t.string "page_number", null: false
     t.string "page_url", null: false
@@ -64,8 +65,6 @@ ActiveRecord::Schema.define(version: 2021_12_13_210333) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "last_read"
-    t.string "favorites"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
