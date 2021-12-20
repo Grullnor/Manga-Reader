@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom"
 import ComicIndexContainer from './ComicIndexContainer'
 import ComicShowContainer from './ComicShowContainer'
 import ChapterShowContainer from './ChapterShowContainer'
+import UserShowContainer from './UserShowContainer'
 
 
 const App = (props) => {
@@ -16,6 +17,7 @@ const App = (props) => {
         <Route exact path="/chapters" component={ChapterShowContainer} />
         <Route exact path="/chapters/:name/:id" component={ChapterShowContainer} />
         <Route exact path="/chapters/:name" component={ChapterShowContainer} />
+        <Route exact path="/user_profile" component={UserShowContainer} />
       </Switch>
     </BrowserRouter>
   </div>
