@@ -49579,3 +49579,233 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 27575)
 
 
+Started GET "/" for ::1 at 2022-01-10 21:41:49 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 5324.1ms | Allocations: 173250)
+Completed 200 OK in 5326ms (Views: 5325.7ms | ActiveRecord: 0.0ms | Allocations: 173489)
+
+
+Started GET "/api/v1/comics?order=newest" for ::1 at 2022-01-10 21:42:15 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"newest"}
+  [1m[36mComic Load (3.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."release_year" DESC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:6:in `index'
+No serializer found for resource: #<Comic id: 7, name: "Jujutsu-Kaisen", description: "High school student Yuki Itadori becomes the host ...", author: "Gege Akutami", release_year: "2018", genres: "Shounen, Action, Supernatural", photo_url: "https://cm.blazefast.co/56/0f/560fed71d91e99f90db3...", total_rating: "0", total_votes: "0", created_at: "2022-01-11 02:32:49.431362000 +0000", updated_at: "2022-01-11 02:32:49.431362000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (3.0ms)
+Completed 200 OK in 67ms (Views: 9.1ms | ActiveRecord: 28.2ms | Allocations: 12870)
+
+
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=comic_show" for ::1 at 2022-01-10 21:44:14 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"comic_show", "name"=>"Jujutsu-Kaisen"}
+  [1m[36mComic Load (0.6ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers]   [1m[36mChapter Load (0.9ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (41.42ms)
+Completed 200 OK in 106ms (Views: 43.8ms | ActiveRecord: 10.2ms | Allocations: 17775)
+
+
+Started GET "/api/v1/chapters/Jujutsu-Kaisen?chapter=1" for ::1 at 2022-01-10 21:44:16 -0500
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=chapter_show" for ::1 at 2022-01-10 21:44:16 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"chapter_show", "name"=>"Jujutsu-Kaisen"}
+Processing by Api::V1::ChaptersController#show as */*
+  [1m[36mComic Load (7.4ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  Parameters: {"chapter"=>"1", "id"=>"Jujutsu-Kaisen"}
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mChapter Load (0.6ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1[0m  [["name", "Jujutsu-Kaisen"]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:3:in `show'
+  [1m[36mComic Load (1.5ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.07ms)
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+Completed 200 OK in 52ms (Views: 37.6ms | ActiveRecord: 8.0ms | Allocations: 28527)
+
+
+  [1m[36mChapter Load (1.3ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 7], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (24.81ms)
+Completed 200 OK in 83ms (Views: 14.9ms | ActiveRecord: 37.5ms | Allocations: 37001)
+
+
+Started GET "/api/v1/comics/Jujutsu%20Kaisen?source=comic_show" for ::1 at 2022-01-10 21:45:35 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"comic_show", "name"=>"Jujutsu Kaisen"}
+  [1m[36mComic Load (1.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (8.85ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.8ms | Allocations: 2514)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/comics_controller.rb:16:in `show'
+Started GET "/api/v1/chapters/Jujutsu-Kaisen?chapter=1" for ::1 at 2022-01-10 21:45:42 -0500
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=chapter_show" for ::1 at 2022-01-10 21:45:42 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Jujutsu-Kaisen"}
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"chapter_show", "name"=>"Jujutsu-Kaisen"}
+  [1m[36mComic Load (0.7ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1[0m  [["name", "Jujutsu-Kaisen"]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:3:in `show'
+  [1m[36mComic Load (1.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mComic Load (1.7ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+  [1m[36mChapter Load (2.0ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mChapter Load (0.9ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 7], ["chapter_number", "1"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.08ms)
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 4.0ms | Allocations: 3001)
+
+
+[active_model_serializers]   [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (5.1ms)
+Completed 200 OK in 22ms (Views: 5.8ms | ActiveRecord: 4.2ms | Allocations: 5483)
+
+
+Started GET "/api/v1/comics/Jujutsu%20Kaisen?source=comic_show" for ::1 at 2022-01-10 21:45:48 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"comic_show", "name"=>"Jujutsu Kaisen"}
+  [1m[36mComic Load (3.2ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (5.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.2ms | Allocations: 2320)
+
+
+  
+NoMethodError (undefined method `model_name' for NilClass:Class
+Did you mean?  module_parent):
+  
+app/controllers/api/v1/comics_controller.rb:16:in `show'
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=chapter_show" for ::1 at 2022-01-10 21:47:09 -0500
+Started GET "/api/v1/chapters/Jujutsu-Kaisen?chapter=1" for ::1 at 2022-01-10 21:47:09 -0500
+Processing by Api::V1::ComicsController#show as */*
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"source"=>"chapter_show", "name"=>"Jujutsu-Kaisen"}
+  Parameters: {"chapter"=>"1", "id"=>"Jujutsu-Kaisen"}
+  [1m[36mComic Load (2.1ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mComic Load (5.3ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1[0m  [["name", "Jujutsu-Kaisen"]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:3:in `show'
+  [1m[36mComic Load (1.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+  [1m[36mChapter Load (0.9ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.1ms)
+Completed 200 OK in 25ms (Views: 3.0ms | ActiveRecord: 3.0ms | Allocations: 2553)
+
+
+  [1m[36mChapter Load (0.7ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 7], ["chapter_number", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers]   [1m[36mPage Load (2.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (12.32ms)
+Completed 200 OK in 41ms (Views: 11.3ms | ActiveRecord: 10.4ms | Allocations: 5168)
+
+
+Started POST "/api/v1/bookmarks" for ::1 at 2022-01-10 21:47:10 -0500
+Started POST "/api/v1/bookmarks" for ::1 at 2022-01-10 21:47:10 -0500
+Started POST "/api/v1/bookmarks" for ::1 at 2022-01-10 21:47:10 -0500
+Started GET "/chapters/Jujutsu-Kaisen/1" for ::1 at 2022-01-10 21:47:10 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"name"=>"Jujutsu-Kaisen", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 4813.0ms | Allocations: 133186)
+Completed 200 OK in 4816ms (Views: 4815.2ms | ActiveRecord: 0.0ms | Allocations: 133512)
+
+
+Processing by Api::V1::BookmarksController#create as JSON
+  Parameters: {"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3", "bookmark"=>{"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3"}}
+Processing by Api::V1::BookmarksController#create as JSON
+  Parameters: {"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3", "bookmark"=>{"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3"}}
+Processing by Api::V1::BookmarksController#create as JSON
+  Parameters: {"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3", "bookmark"=>{"name"=>"Jujutsu-Kaisen", "chapter"=>"1", "page_number"=>"3", "page_url"=>"/chapters/Jujutsu-Kaisen/1#page_3"}}
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms | Allocations: 8452)
+
+
+Completed 401 Unauthorized in 41ms (ActiveRecord: 0.0ms | Allocations: 9162)
+
+
+Completed 401 Unauthorized in 49ms (ActiveRecord: 16.8ms | Allocations: 9729)
+
+
+Started GET "/api/v1/chapters/Jujutsu-Kaisen?chapter=1" for ::1 at 2022-01-10 21:47:15 -0500
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=chapter_show" for ::1 at 2022-01-10 21:47:15 -0500
+Processing by Api::V1::ChaptersController#show as */*
+  Parameters: {"chapter"=>"1", "id"=>"Jujutsu-Kaisen"}
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"chapter_show", "name"=>"Jujutsu-Kaisen"}
+  [1m[36mComic Load (1.0ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1[0m  [["name", "Jujutsu-Kaisen"]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:3:in `show'
+  [1m[36mComic Load (0.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+  [1m[36mComic Load (2.8ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+  [1m[36mChapter Load (3.2ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+  ↳ app/controllers/api/v1/comics_controller.rb:18:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.1ms)
+  [1m[36mChapter Load (2.8ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1 AND "chapters"."chapter_number" = $2 LIMIT $3[0m  [["comic_id", 7], ["chapter_number", "1"], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 2.0ms | ActiveRecord: 4.0ms | Allocations: 2754)
+
+
+  ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers]   [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."chapter_id" = $1[0m  [["chapter_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/chapters_controller.rb:4:in `show'
+[active_model_serializers] Rendered ChapterShowSerializer with ActiveModelSerializers::Adapter::Attributes (7.62ms)
+Completed 200 OK in 36ms (Views: 8.2ms | ActiveRecord: 7.5ms | Allocations: 6039)
+
+
+Started GET "/api/v1/comics/Jujutsu-Kaisen?source=comic_show" for ::1 at 2022-01-10 21:47:16 -0500
+Processing by Api::V1::ComicsController#show as */*
+  Parameters: {"source"=>"comic_show", "name"=>"Jujutsu-Kaisen"}
+  [1m[36mComic Load (0.6ms)[0m  [1m[34mSELECT "comics".* FROM "comics" WHERE "comics"."name" = $1 LIMIT $2[0m  [["name", "Jujutsu-Kaisen"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers]   [1m[36mChapter Load (0.4ms)[0m  [1m[34mSELECT "chapters".* FROM "chapters" WHERE "chapters"."comic_id" = $1[0m  [["comic_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/comics_controller.rb:16:in `show'
+[active_model_serializers] Rendered ComicShowSerializer with ActiveModelSerializers::Adapter::Attributes (4.53ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.0ms | Allocations: 2301)
+
+
+Started POST "/api/v1/bookmarks" for ::1 at 2022-01-10 21:47:23 -0500
+Processing by Api::V1::BookmarksController#create as JSON
+  Parameters: {"name"=>"Jujutsu-Kaisen", "page_number"=>"", "page_url"=>"/comics/Jujutsu-Kaisen", "bookmark"=>{"name"=>"Jujutsu-Kaisen", "page_number"=>"", "page_url"=>"/comics/Jujutsu-Kaisen"}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/" for ::1 at 2022-01-10 21:47:23 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 27476)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 27737)
+
+
+Started GET "/api/v1/comics?order=" for ::1 at 2022-01-10 21:47:27 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>""}
+  [1m[36mComic Load (0.6ms)[0m  [1m[34mSELECT "comics".* FROM "comics"[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:10:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "This story follows a young ninja who strives to be...", author: "Masashi Kishimoto", release_year: "1999", genres: "Shounen, Comedy, Adventure", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2022-01-11 02:32:48.786157000 +0000", updated_at: "2022-01-11 02:32:48.786157000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (4.11ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 4101)
+
+

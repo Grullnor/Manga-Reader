@@ -134,7 +134,7 @@ const PageTile = (props) => {
 
   return (
     <div className='chapter-show'>
-      <Link className='link-back' to={`/comics/${name}`}>← Back to {name}</Link>
+      <Link className='link-back' to={`/comics/${pageInfo[2]}`}>← Back to {name}</Link>
       <div className='top-text'>
         Mangareader allows many ways to swap pages,
         click the left or right side of the page,
