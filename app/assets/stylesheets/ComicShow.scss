@@ -1,0 +1,51 @@
+.comic-show{
+    width: 800;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 10px;
+    border: 1px solid rgb(235, 200, 2);
+    padding: 0 16px;
+}
+
+.comic-show-photo {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    object-fit: contain, cover;
+    border: 2px solid  rgb(235, 200, 2);
+    box-shadow: 0 2px 4px 0 rgba(63, 63, 55, .10);
+  }
+
+.comic-show-info {
+    margin-top: 10px;
+    list-style: none;
+    color: white;
+}
+
+.chapter-index{
+    width: 800;
+    height: auto;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: left;
+    border: 1px solid rgb(235, 200, 2);
+    margin: 10px;
+    padding: 0;
+}
+
+.chapter-text{
+    display: block;
+    padding-left: 26px;
+    margin-bottom: 5px;
+}
+
+.chapter-index a{
+    color: white;
+}
+
+.chapter-index a:hover{
+    transition: all 0.2s linear 0s;
+    color: rgb(235, 200, 2);
+}

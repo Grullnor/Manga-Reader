@@ -1,9 +1,17 @@
 class Api::V1::ComicsController < ApplicationController
     def index
-      render json: Comic.all
+      if(params["order"] == "alphabetic")
+        render json: Comic.all.order(:name)
+      elsif(params["order"] == "")
+        render json: Comic.all
+      end
     end
 
     def show
-      render json: Comic.find_by(name: params[:name]), serializer: ComicShowSerializer
+      if(params["source"] == "comic_show")
+        render json: Comic.find_by(name: params[:name]), serializer: ComicShowSerializer
+      elsif(params["source"] == "chapter_show")
+        render json: Chapter.where(comic_id: Comic.find_by(name: params[:name]).id).length
+      end
     end
 end

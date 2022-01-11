@@ -1,0 +1,79 @@
+.user-page {
+    width: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0px;
+    margin: 0px auto;
+    margin-top: 20px;
+    background-color: #1b1b1b;
+  }
+
+.user-info {
+    display: block;        
+    color: white;
+    border: none;
+    margin-top: 4px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.user-info-text{
+    margin-left: 10px;
+}
+
+.bookmark-tiles-header {
+    width: 860px;
+    height: 32px;
+    background-color: rgb(235, 180, 0);
+    border: 1px solid rgb(187, 187, 187);
+    font-size: 14pt;
+}
+.bookmark-tiles-container{
+    width: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.bookmark-tiles-header-text{
+    margin-left: 3%;
+    color: rgb(0, 0, 0);
+}
+
+.bookmark-container{
+    width: 150px;
+    height: 240px;
+}
+
+.bookmark-photo {
+    width: 150px;
+    height: 220px;
+    margin: 10px;
+    object-fit: contain, cover;
+    display: flex;
+    border-radius: 3%;
+    box-shadow: 0 2px 4px 0 rgba(63, 63, 55, .10);
+  }
+
+.bookmark-photo:hover {
+    transition: all 0.2s linear 0s;
+    opacity: 75%;
+}
+
+.bookmark-photo-text {
+    display: block;
+    text-align: center;
+    font-size: 11pt;
+    color: white;
+    margin: 0;
+  }
+
+.bookmark-photo-text:hover {
+    transition: all 0.3s linear 0s;
+    color: rgb(255, 255, 140);
+  }

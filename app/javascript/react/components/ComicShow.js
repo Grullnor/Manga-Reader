@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const ChapterTile = (props) => {
   return (
-    <div>
+    <div className='chapter-text'>
       <Link to={`/chapters/${props.name}/${props.chapter}#page_1`}>
           {props.title}
       </Link>

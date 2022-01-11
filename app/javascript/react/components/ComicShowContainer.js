@@ -6,12 +6,17 @@ const ComicShowContainer = (props) => {
       id: "",
       name: "",
       description: "",
+      author: "",
+      genres: "",
+      photo_url: "",
       chapters: []
   })
 
+  const displayName = comic.name.replaceAll('-', ' ')
+
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/v1/comics/${props.match.params.name}`)
+      const response = await fetch(`/api/v1/comics/${props.match.params.name}?source=comic_show`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
@@ -38,10 +43,21 @@ const ComicShowContainer = (props) => {
             />
   })
 
+
   return (
     <div>
-      {comic.name}
-      {comicTiles}
+        <div className="comic-show">
+          <img className="comic-show-photo" src={comic.photo_url} />
+          <ul className="comic-show-info">
+            <li>Series name: {displayName}</li>
+            <li>Author: {comic.author}</li>
+            <li>Genres: {comic.genres}</li>
+            <li>Description: {comic.description}</li>
+          </ul>
+        </div>
+      <div className="chapter-index">
+        {comicTiles}
+      </div>
     </div>
   )
 }

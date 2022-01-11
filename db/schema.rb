@@ -40,7 +40,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_210333) do
   create_table "comics", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
-    t.string "author", null: false
+    t.string "author"
+    t.string "release_year"
     t.string "genres", null: false
     t.string "photo_url", null: false
     t.string "total_rating", null: false

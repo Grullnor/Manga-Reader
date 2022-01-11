@@ -4,6 +4,7 @@ import ComicIndexContainer from './ComicIndexContainer'
 import ComicShowContainer from './ComicShowContainer'
 import ChapterShowContainer from './ChapterShowContainer'
 import UserShowContainer from './UserShowContainer'
+import Home from './Home'
 
 
 const App = (props) => {
@@ -11,7 +12,7 @@ const App = (props) => {
   <div>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={ComicIndexContainer} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/comics" component={ComicIndexContainer} />
         <Route exact path="/comics/:name" component={ComicShowContainer} />
         <Route exact path="/chapters" component={ChapterShowContainer} />
