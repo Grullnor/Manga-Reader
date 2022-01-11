@@ -2,6 +2,10 @@ class Api::V1::ComicsController < ApplicationController
     def index
       if(params["order"] == "alphabetic")
         render json: Comic.all.order(:name)
+      elsif(params["order"] == "newest")
+        render json: Comic.all.order(release_year: :desc)
+      elsif(params["order"] == "oldest")
+        render json: Comic.all.order(:release_year)
       elsif(params["order"] == "")
         render json: Comic.all
       end

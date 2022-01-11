@@ -8,7 +8,8 @@ const Home = (props) =>{
             <h4 className="title">All Manga!</h4>
             <div className="button-container">
               <Link className="button-box" to='/comics?order=alphabetic'>A-Z</Link>
-              <Link className="button-box" to='/comics?order=latest'>Latest</Link>
+              <Link className="button-box" to='/comics?order=newest'>Newest</Link>
+              <Link className="button-box" to='/comics?order=oldest'>Oldest</Link>
             </div>
         </div>
     )

@@ -48546,3 +48546,1036 @@ Processing by Api::V1::ComicsController#show as */*
 Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 2.1ms | Allocations: 2073)
 
 
+Started GET "/comics?order=year" for ::1 at 2022-01-10 20:50:59 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Parameters: {"order"=>"year"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 321)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 9034.3ms | Allocations: 3090670)
+Completed 200 OK in 9046ms (Views: 9041.9ms | ActiveRecord: 0.0ms | Allocations: 3093176)
+
+
+Started GET "/api/v1/comics?order=year" for ::1 at 2022-01-10 20:51:08 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"year"}
+  [1m[36mComic Load (1.7ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."release_year" ASC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:6:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "Believe it", author: "idk", release_year: nil, genres: "[Shonnen]", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2022-01-06 04:05:48.160490000 +0000", updated_at: "2022-01-06 04:05:48.160490000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (1.75ms)
+Completed 200 OK in 142ms (Views: 94.7ms | ActiveRecord: 29.8ms | Allocations: 28762)
+
+
+Started GET "/" for ::1 at 2022-01-10 20:51:10 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 38412)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms | Allocations: 38695)
+
+
+Started GET "/" for ::1 at 2022-01-10 20:52:03 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 237.3ms | Allocations: 77723)
+Completed 200 OK in 239ms (Views: 238.3ms | ActiveRecord: 0.0ms | Allocations: 77966)
+
+
+Started GET "/" for ::1 at 2022-01-10 20:57:17 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/raffisahagian/challenges/manga-reader/public/packs
+  Rendered layout layouts/application.html.erb (Duration: 6268.0ms | Allocations: 184486)
+Completed 200 OK in 6270ms (Views: 6269.4ms | Allocations: 185072)
+
+
+Started GET "/api/v1/comics?order=newest" for ::1 at 2022-01-10 20:57:27 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"newest"}
+  [1m[36mComic Load (1.6ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."release_year" DESC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:6:in `index'
+No serializer found for resource: #<Comic id: 1, name: "Naruto", description: "Believe it", author: "idk", release_year: nil, genres: "[Shonnen]", photo_url: "https://images-na.ssl-images-amazon.com/images/I/9...", total_rating: "0", total_votes: "0", created_at: "2022-01-06 04:05:48.160490000 +0000", updated_at: "2022-01-06 04:05:48.160490000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (1.06ms)
+Completed 200 OK in 78ms (Views: 35.0ms | ActiveRecord: 19.3ms | Allocations: 30046)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (65.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "manga-reader_development"[0m
+  [1m[35m (53.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "manga-reader_test"[0m
+  [1m[35m (178.2ms)[0m  [1m[35mCREATE DATABASE "manga-reader_development" ENCODING = 'unicode'[0m
+  [1m[35m (85.1ms)[0m  [1m[35mCREATE DATABASE "manga-reader_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1315207269198642435)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComics (20211125035654)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "comics" ("id" bigserial primary key, "name" character varying NOT NULL, "description" character varying NOT NULL, "author" character varying, "release_year" character varying, "genres" character varying NOT NULL, "photo_url" character varying NOT NULL, "total_rating" character varying NOT NULL, "total_votes" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211125035654"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChapters (20211125035716)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "chapters" ("id" bigserial primary key, "title" character varying NOT NULL, "chapter_number" character varying NOT NULL, "total_pages" character varying NOT NULL, "comic_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_chapters_on_comic_id" ON "chapters" ("comic_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211125035716"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePages (20211201012028)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "pages" ("id" bigserial primary key, "page_number" character varying NOT NULL, "page_url" character varying NOT NULL, "chapter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_pages_on_chapter_id" ON "pages" ("chapter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211201012028"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20211210190145)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "user_name" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211210190145"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookmarks (20211213210333)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "name" character varying NOT NULL, "comic_photo_url" character varying NOT NULL, "chapter" character varying NOT NULL, "page_number" character varying NOT NULL, "page_url" character varying NOT NULL, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_user_id" ON "bookmarks" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211213210333"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-11 02:32:03.299804"], ["updated_at", "2022-01-11 02:32:03.299804"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1315207269198642435)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (1.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Naruto"], ["description", "This story follows a young ninja who strives to be acknowledged by his peers and is intent on becoming the next Hokage, which is the leader of their village. This determined young ninja's name is Naruto Uzumaki, believe it!"], ["author", "Masashi Kishimoto"], ["release_year", "1999"], ["genres", "Shounen, Comedy, Adventure"], ["photo_url", "https://images-na.ssl-images-amazon.com/images/I/912xRMMra4L.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:48.786157"], ["updated_at", "2022-01-11 02:32:48.786157"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (1.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "53"], ["comic_id", 1], ["created_at", "2022-01-11 02:32:48.803783"], ["updated_at", "2022-01-11 02:32:48.803783"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (1.6ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/35/c3/35c3f91e63e3e61e9530aede9447edcb.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.827109"], ["updated_at", "2022-01-11 02:32:48.827109"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/6e/35/6e35a321528be0e52608711583ab317e.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.832776"], ["updated_at", "2022-01-11 02:32:48.832776"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/4f/c1/4fc1568d9762b017ab73caabed3b1c77.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.836824"], ["updated_at", "2022-01-11 02:32:48.836824"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "4"], ["page_url", "https://cm.blazefast.co/62/aa/62aac8445beecbaa7c7bc261b71eba9b.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.841042"], ["updated_at", "2022-01-11 02:32:48.841042"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "5"], ["page_url", "https://cm.blazefast.co/7d/8f/7d8f2c963e938a3629bba00186aefd8f.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.845038"], ["updated_at", "2022-01-11 02:32:48.845038"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.6ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "6"], ["page_url", "https://cm.blazefast.co/65/e4/65e4d552045ea91670f07b2423b87b5d.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.848961"], ["updated_at", "2022-01-11 02:32:48.848961"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "7"], ["page_url", "https://cm.blazefast.co/d4/8b/d48bf8ddf6c856bf4bed03b109ca3b26.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.853081"], ["updated_at", "2022-01-11 02:32:48.853081"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "8"], ["page_url", "https://cm.blazefast.co/fb/2a/fb2a5d5ffea59bb7ef01fe93fcff14bd.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.857110"], ["updated_at", "2022-01-11 02:32:48.857110"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "9"], ["page_url", "https://cm.blazefast.co/9a/50/9a50a1a26e4b2fdcd4354e6e4a7a8f09.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.861065"], ["updated_at", "2022-01-11 02:32:48.861065"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "10"], ["page_url", "https://cm.blazefast.co/24/10/2410496e86a1b9b0587ca86c09fcc7bf.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.864909"], ["updated_at", "2022-01-11 02:32:48.864909"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "11"], ["page_url", "https://cm.blazefast.co/ec/15/ec15027d0d0439849cc096e03b8ce2f5.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.868982"], ["updated_at", "2022-01-11 02:32:48.868982"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "12"], ["page_url", "https://cm.blazefast.co/56/3d/563d62ab566e346ef779c9bd0a21ef24.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.872885"], ["updated_at", "2022-01-11 02:32:48.872885"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "13"], ["page_url", "https://cm.blazefast.co/f3/76/f376492c55d9970309b51f2e41587f7f.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.876902"], ["updated_at", "2022-01-11 02:32:48.876902"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "14"], ["page_url", "https://cm.blazefast.co/a9/22/a9226fad73a71112da24d57b92cbc006.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.880929"], ["updated_at", "2022-01-11 02:32:48.880929"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "15"], ["page_url", "https://cm.blazefast.co/75/1e/751e33e77f57fa36ed3c7037c734cb03.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.884954"], ["updated_at", "2022-01-11 02:32:48.884954"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "16"], ["page_url", "https://cm.blazefast.co/8f/ba/8fba46c304e4ad506acd8cf166c997c8.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.889003"], ["updated_at", "2022-01-11 02:32:48.889003"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "17"], ["page_url", "https://cm.blazefast.co/40/a1/40a124b87d0daa2ba861e239db7e193b.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.893414"], ["updated_at", "2022-01-11 02:32:48.893414"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "18"], ["page_url", "https://cm.blazefast.co/8e/64/8e64cade13bffa493eb9933caba91af8.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.897568"], ["updated_at", "2022-01-11 02:32:48.897568"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "19"], ["page_url", "https://cm.blazefast.co/8d/6a/8d6acd478feeeb1dc7571c84d3343200.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.901738"], ["updated_at", "2022-01-11 02:32:48.901738"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "20"], ["page_url", "https://cm.blazefast.co/e0/76/e076565301d0c8de6b49e076c79d7b3e.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.905864"], ["updated_at", "2022-01-11 02:32:48.905864"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "21"], ["page_url", "https://cm.blazefast.co/c1/0f/c10fc6e88883f1f5f8b72fe3cf4d9bbe.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.910053"], ["updated_at", "2022-01-11 02:32:48.910053"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "22"], ["page_url", "https://cm.blazefast.co/48/62/4862b23f39a3213d2788bbba81b1163b.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.914113"], ["updated_at", "2022-01-11 02:32:48.914113"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "23"], ["page_url", "https://cm.blazefast.co/23/a5/23a51e51a07e7cde078fc98d5115fd0c.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.918482"], ["updated_at", "2022-01-11 02:32:48.918482"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "24"], ["page_url", "https://cm.blazefast.co/4e/53/4e534b59a53b043d7b0e7c6475d65665.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.922527"], ["updated_at", "2022-01-11 02:32:48.922527"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "25"], ["page_url", "https://cm.blazefast.co/9a/4e/9a4e3e4bf7ff50e22c5423d42cb125e4.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.926713"], ["updated_at", "2022-01-11 02:32:48.926713"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "26"], ["page_url", "https://cm.blazefast.co/67/60/67608d7799d8793637658e3056f904c8.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.931408"], ["updated_at", "2022-01-11 02:32:48.931408"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "27"], ["page_url", "https://cm.blazefast.co/7b/21/7b21486cc08d18ecae0093bb95f8956f.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.940638"], ["updated_at", "2022-01-11 02:32:48.940638"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.6ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "28"], ["page_url", "https://cm.blazefast.co/26/0e/260ecd54578c79821e54f56e92954f64.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.967409"], ["updated_at", "2022-01-11 02:32:48.967409"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "29"], ["page_url", "https://cm.blazefast.co/3d/db/3ddb175f09df2bc858c9c89651f3293e.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:48.990747"], ["updated_at", "2022-01-11 02:32:48.990747"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "30"], ["page_url", "https://cm.blazefast.co/4d/03/4d03b1c3046c73e2fa1c4d78e067ac79.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.007683"], ["updated_at", "2022-01-11 02:32:49.007683"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "31"], ["page_url", "https://cm.blazefast.co/86/3e/863e3caef18f19b1cb9b5b1dd3d046cb.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.011835"], ["updated_at", "2022-01-11 02:32:49.011835"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "32"], ["page_url", "https://cm.blazefast.co/69/a2/69a2aa5ea9f2d1c8e63de76137f33adb.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.015929"], ["updated_at", "2022-01-11 02:32:49.015929"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "33"], ["page_url", "https://cm.blazefast.co/2b/6b/2b6b6ac5c2669bc143a6ea96d2eb32ca.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.019951"], ["updated_at", "2022-01-11 02:32:49.019951"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "34"], ["page_url", "https://cm.blazefast.co/59/84/598470f421ea8140d7a8d6129bd18cbf.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.024933"], ["updated_at", "2022-01-11 02:32:49.024933"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "35"], ["page_url", "https://cm.blazefast.co/0d/4b/0d4b977857b9ed57a861813a05d0630b.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.029904"], ["updated_at", "2022-01-11 02:32:49.029904"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.7ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "36"], ["page_url", "https://cm.blazefast.co/e6/d2/e6d2d4b663f3afe5c378282fe796234b.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.034282"], ["updated_at", "2022-01-11 02:32:49.034282"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "37"], ["page_url", "https://cm.blazefast.co/37/7c/377c1409d85da1a9e2d3aba35f7fd0d9.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.038436"], ["updated_at", "2022-01-11 02:32:49.038436"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "38"], ["page_url", "https://cm.blazefast.co/a3/d5/a3d5cacb6bca0039358f79505b7aebdd.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.042648"], ["updated_at", "2022-01-11 02:32:49.042648"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "39"], ["page_url", "https://cm.blazefast.co/1d/5f/1d5f9c14c9501a6abcf931e89c5786ed.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.046708"], ["updated_at", "2022-01-11 02:32:49.046708"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "40"], ["page_url", "https://cm.blazefast.co/ae/6e/ae6ebcd121dffa78de66906b6d5f5e7c.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.050840"], ["updated_at", "2022-01-11 02:32:49.050840"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "41"], ["page_url", "https://cm.blazefast.co/df/cd/dfcd2e3af43037c07089bb57b37f3260.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.054826"], ["updated_at", "2022-01-11 02:32:49.054826"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "42"], ["page_url", "https://cm.blazefast.co/1c/1d/1c1d2abc47c2b8b80a44a8a133fcd31d.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.058852"], ["updated_at", "2022-01-11 02:32:49.058852"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "43"], ["page_url", "https://cm.blazefast.co/c1/08/c10862bca2b4b5a90267d59653fb1c13.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.062924"], ["updated_at", "2022-01-11 02:32:49.062924"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "44"], ["page_url", "https://cm.blazefast.co/b2/ac/b2ace304e5d514454040d4acc7a011d2.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.067011"], ["updated_at", "2022-01-11 02:32:49.067011"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "45"], ["page_url", "https://cm.blazefast.co/51/f9/51f9c41d7d6dc072a375b1f9041b3c35.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.071055"], ["updated_at", "2022-01-11 02:32:49.071055"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "46"], ["page_url", "https://cm.blazefast.co/44/96/449640350056cc4cae16b10391c07d85.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.075181"], ["updated_at", "2022-01-11 02:32:49.075181"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "47"], ["page_url", "https://cm.blazefast.co/47/f2/47f22525efef83ec77ea66ba3d77af93.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.079284"], ["updated_at", "2022-01-11 02:32:49.079284"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "48"], ["page_url", "https://cm.blazefast.co/2b/bc/2bbc6467be2947c48f3abd0fa50b4459.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.083324"], ["updated_at", "2022-01-11 02:32:49.083324"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "49"], ["page_url", "https://cm.blazefast.co/21/90/2190bf9a58ab1614ff22f6626aff810f.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.087326"], ["updated_at", "2022-01-11 02:32:49.087326"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "50"], ["page_url", "https://cm.blazefast.co/33/f7/33f737866d9573a33b0dd5a0b7679a8d.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.091294"], ["updated_at", "2022-01-11 02:32:49.091294"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.6ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "51"], ["page_url", "https://cm.blazefast.co/dc/16/dc161515a2e934d9582c928443974d76.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.095895"], ["updated_at", "2022-01-11 02:32:49.095895"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "52"], ["page_url", "https://cm.blazefast.co/32/de/32de3534b699b8d979a4a42d6fb8ce78.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.101135"], ["updated_at", "2022-01-11 02:32:49.101135"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "53"], ["page_url", "https://cm.blazefast.co/9d/5a/9d5afda02d000091f4152ea610af9dce.jpg"], ["chapter_id", 1], ["created_at", "2022-01-11 02:32:49.106427"], ["updated_at", "2022-01-11 02:32:49.106427"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 1], ["created_at", "2022-01-11 02:32:49.112332"], ["updated_at", "2022-01-11 02:32:49.112332"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "http://cm.blazefast.co/2e/ea/2eeab195b6a26f8bfae825259e998138.jpg"], ["chapter_id", 2], ["created_at", "2022-01-11 02:32:49.116721"], ["updated_at", "2022-01-11 02:32:49.116721"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "http://cm.blazefast.co/31/1d/311dc632f26386a2c52f7e29dc6e946a.jpg"], ["chapter_id", 2], ["created_at", "2022-01-11 02:32:49.120751"], ["updated_at", "2022-01-11 02:32:49.120751"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "http://cm.blazefast.co/12/da/12da24bcc395fa5ce279bb170be4d44b.jpg"], ["chapter_id", 2], ["created_at", "2022-01-11 02:32:49.124956"], ["updated_at", "2022-01-11 02:32:49.124956"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 1], ["created_at", "2022-01-11 02:32:49.129216"], ["updated_at", "2022-01-11 02:32:49.129216"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a1/14/a11498a3c23977436c2728e5e07c5af9.jpg"], ["chapter_id", 3], ["created_at", "2022-01-11 02:32:49.133811"], ["updated_at", "2022-01-11 02:32:49.133811"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/98/78/9878ab7d308d628c1caa7a57d3399aeb.jpg"], ["chapter_id", 3], ["created_at", "2022-01-11 02:32:49.137663"], ["updated_at", "2022-01-11 02:32:49.137663"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/9e/65/9e650b028ad949ed0d287b53ee5aa22f.jpg"], ["chapter_id", 3], ["created_at", "2022-01-11 02:32:49.141699"], ["updated_at", "2022-01-11 02:32:49.141699"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "One-Piece"], ["description", "Pirate Monkey D. Luffy and the rest of his crew are set out in search of the most extaordinary treasure ever left by Gold Roger, a legendary pirate. Luffy is in search of the treasure, called the One Piece, in order to become the next pirate king."], ["author", "Eiichiro Oda"], ["release_year", "1997"], ["genres", "Shounen, Action, Comedy"], ["photo_url", "https://covers2.booksamillion.com/covers/bam/1/56/931/901/1569319014_b.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.145809"], ["updated_at", "2022-01-11 02:32:49.145809"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 2], ["created_at", "2022-01-11 02:32:49.150366"], ["updated_at", "2022-01-11 02:32:49.150366"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/59/08/5908edc1d1a8d5b5ff1e165b11dafa1c.jpg"], ["chapter_id", 4], ["created_at", "2022-01-11 02:32:49.154507"], ["updated_at", "2022-01-11 02:32:49.154507"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/af/c3/afc35a0393b58af1db2c66c30c75387c.jpg"], ["chapter_id", 4], ["created_at", "2022-01-11 02:32:49.159904"], ["updated_at", "2022-01-11 02:32:49.159904"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (1.0ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/71/71/7171f0f9b99b5333fb58378d51ac054d.jpg"], ["chapter_id", 4], ["created_at", "2022-01-11 02:32:49.164294"], ["updated_at", "2022-01-11 02:32:49.164294"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 2], ["created_at", "2022-01-11 02:32:49.169765"], ["updated_at", "2022-01-11 02:32:49.169765"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/06/c0/06c0808ebdf19bb5b7da29f9b4f414a0.jpg"], ["chapter_id", 5], ["created_at", "2022-01-11 02:32:49.174343"], ["updated_at", "2022-01-11 02:32:49.174343"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/31/d3/31d30dab0d3a45bd44b19dd674f2b398.jpg"], ["chapter_id", 5], ["created_at", "2022-01-11 02:32:49.179060"], ["updated_at", "2022-01-11 02:32:49.179060"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/cf/f3/cff3d798c6d3a1f1a108ee7cd959a6d4.jpg"], ["chapter_id", 5], ["created_at", "2022-01-11 02:32:49.183460"], ["updated_at", "2022-01-11 02:32:49.183460"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 2], ["created_at", "2022-01-11 02:32:49.187811"], ["updated_at", "2022-01-11 02:32:49.187811"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/1a/9c/1a9c69d681ce5c444dc52b9809957be5.jpg"], ["chapter_id", 6], ["created_at", "2022-01-11 02:32:49.196214"], ["updated_at", "2022-01-11 02:32:49.196214"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/26/0d/260dc6b0a554e878dce349bdba49fa76.jpg"], ["chapter_id", 6], ["created_at", "2022-01-11 02:32:49.200499"], ["updated_at", "2022-01-11 02:32:49.200499"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/a7/e6/a7e632f2a46bdd19b4a86fb39eb7e860.jpg"], ["chapter_id", 6], ["created_at", "2022-01-11 02:32:49.204639"], ["updated_at", "2022-01-11 02:32:49.204639"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Bleach"], ["description", "This story follows the journey of Ichigo Kurosaki, who becomes a Soul Reaper in order to save his family. He is tasked with hunting down the threat that torments their town called the Hollows, ghosts that feed on other souls. Rather than solo, he works with his fellow classmates and friends to combat the threat."], ["author", "Tite Kubo"], ["release_year", "2001"], ["genres", "Drama, Action, Shounen"], ["photo_url", "https://images-na.ssl-images-amazon.com/images/I/516WLV8lFCL._SX331_BO1,204,203,200_.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.208892"], ["updated_at", "2022-01-11 02:32:49.208892"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 3], ["created_at", "2022-01-11 02:32:49.213399"], ["updated_at", "2022-01-11 02:32:49.213399"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a6/6f/a66f5bef9929d628366747a67b8e66c1.jpg"], ["chapter_id", 7], ["created_at", "2022-01-11 02:32:49.217678"], ["updated_at", "2022-01-11 02:32:49.217678"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/8e/09/8e095e91c927464fa9dc6c1a2aff35d1.jpg"], ["chapter_id", 7], ["created_at", "2022-01-11 02:32:49.221756"], ["updated_at", "2022-01-11 02:32:49.221756"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/44/87/44875e08de836868194246f59ed1c9ef.jpg"], ["chapter_id", 7], ["created_at", "2022-01-11 02:32:49.225891"], ["updated_at", "2022-01-11 02:32:49.225891"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 3], ["created_at", "2022-01-11 02:32:49.229985"], ["updated_at", "2022-01-11 02:32:49.229985"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/41/c3/41c341b1337b894fb4713096c1b07e49.jpg"], ["chapter_id", 8], ["created_at", "2022-01-11 02:32:49.234149"], ["updated_at", "2022-01-11 02:32:49.234149"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/54/9b/549bfd1511c5894faffc3edf02a3878d.jpg"], ["chapter_id", 8], ["created_at", "2022-01-11 02:32:49.238314"], ["updated_at", "2022-01-11 02:32:49.238314"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/30/f0/30f0a2749849baff6376abe88075e921.jpg"], ["chapter_id", 8], ["created_at", "2022-01-11 02:32:49.242377"], ["updated_at", "2022-01-11 02:32:49.242377"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 3], ["created_at", "2022-01-11 02:32:49.246502"], ["updated_at", "2022-01-11 02:32:49.246502"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/39/28/392838ddc7bb163b19142a1c82a79b35.jpg"], ["chapter_id", 9], ["created_at", "2022-01-11 02:32:49.250729"], ["updated_at", "2022-01-11 02:32:49.250729"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/70/72/7072f26ea69eccce8d35f17965f45d06.jpg"], ["chapter_id", 9], ["created_at", "2022-01-11 02:32:49.254752"], ["updated_at", "2022-01-11 02:32:49.254752"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/84/76/8476923d2f2421f46a40b51b2d80ab0a.jpg"], ["chapter_id", 9], ["created_at", "2022-01-11 02:32:49.258951"], ["updated_at", "2022-01-11 02:32:49.258951"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fairy-Tail"], ["description", "An aspiring mage named Lucy is set out to better her skills to become a full-fledged wizard. She ends up joining the strongest and most well-known guild called Fairy Tail, where she befriends three powerful wizards named Natsu, Gray and Erza. They take on adventures and hardships together as they improve their skills and learn to overcome their endeavors with love and friendship."], ["author", "Hiro Mashima"], ["release_year", "2006"], ["genres", "Fantasy, Comedy, Action"], ["photo_url", "https://images-na.ssl-images-amazon.com/images/I/91tWNPt9AQL.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.263154"], ["updated_at", "2022-01-11 02:32:49.263154"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 4], ["created_at", "2022-01-11 02:32:49.267465"], ["updated_at", "2022-01-11 02:32:49.267465"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/e8/26/e826313ea667c4f5bb34a3ba47e2fc15.jpg"], ["chapter_id", 10], ["created_at", "2022-01-11 02:32:49.271736"], ["updated_at", "2022-01-11 02:32:49.271736"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/e8/13/e813e2002b5dac1aaf496ff1a8412748.jpg"], ["chapter_id", 10], ["created_at", "2022-01-11 02:32:49.276160"], ["updated_at", "2022-01-11 02:32:49.276160"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/f1/2b/f12bf5c641fc1ed350d70f65b6d59373.jpg"], ["chapter_id", 10], ["created_at", "2022-01-11 02:32:49.280323"], ["updated_at", "2022-01-11 02:32:49.280323"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 4], ["created_at", "2022-01-11 02:32:49.284508"], ["updated_at", "2022-01-11 02:32:49.284508"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/22/b6/22b66f39b000789cab132c5490a0b521.jpg"], ["chapter_id", 11], ["created_at", "2022-01-11 02:32:49.288822"], ["updated_at", "2022-01-11 02:32:49.288822"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/d7/20/d7205e77acfa5a2b6916e3b25261d260.jpg"], ["chapter_id", 11], ["created_at", "2022-01-11 02:32:49.292814"], ["updated_at", "2022-01-11 02:32:49.292814"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/6d/4e/6d4ed70eb8f4a57c978c0d22eba24903.jpg"], ["chapter_id", 11], ["created_at", "2022-01-11 02:32:49.296895"], ["updated_at", "2022-01-11 02:32:49.296895"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 4], ["created_at", "2022-01-11 02:32:49.301143"], ["updated_at", "2022-01-11 02:32:49.301143"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/59/b2/59b2a1695fd56be55511523eb156e3d0.jpg"], ["chapter_id", 12], ["created_at", "2022-01-11 02:32:49.305358"], ["updated_at", "2022-01-11 02:32:49.305358"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/99/44/9944f3aa83fd10a22a3c33ace2c49f15.jpg"], ["chapter_id", 12], ["created_at", "2022-01-11 02:32:49.309291"], ["updated_at", "2022-01-11 02:32:49.309291"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/f7/f2/f7f2f94ec508d2294563664849f2633e.jpg"], ["chapter_id", 12], ["created_at", "2022-01-11 02:32:49.314494"], ["updated_at", "2022-01-11 02:32:49.314494"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Berserk"], ["description", "A swordsman of good skill named Guts joins a mercenary group named The Band of the Hawk. They fight for the King of Midland, Guts using this experience to find his purpose with this group of warriors."], ["author", "Kentaro Miura"], ["release_year", "1990"], ["genres", "Fantasy, Adventure, Supernatural"], ["photo_url", "https://cm.blazefast.co/25/40/2540570213de16b9fbcdd87532159d87.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.318902"], ["updated_at", "2022-01-11 02:32:49.318902"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 5], ["created_at", "2022-01-11 02:32:49.323461"], ["updated_at", "2022-01-11 02:32:49.323461"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/25/40/2540570213de16b9fbcdd87532159d87.jpg"], ["chapter_id", 13], ["created_at", "2022-01-11 02:32:49.327740"], ["updated_at", "2022-01-11 02:32:49.327740"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/19/06/1906413d33fc22ff8cbf57c2b7ef7bd3.jpg"], ["chapter_id", 13], ["created_at", "2022-01-11 02:32:49.331869"], ["updated_at", "2022-01-11 02:32:49.331869"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/6a/a7/6aa78d348410b428708102d90529d436.jpg"], ["chapter_id", 13], ["created_at", "2022-01-11 02:32:49.336025"], ["updated_at", "2022-01-11 02:32:49.336025"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 5], ["created_at", "2022-01-11 02:32:49.340293"], ["updated_at", "2022-01-11 02:32:49.340293"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/93/cf/93cf980437fb9f8ee00ffcc925917577.jpg"], ["chapter_id", 14], ["created_at", "2022-01-11 02:32:49.344604"], ["updated_at", "2022-01-11 02:32:49.344604"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/33/19/331911af590900ae5b86a3e55c41699f.jpg"], ["chapter_id", 14], ["created_at", "2022-01-11 02:32:49.348814"], ["updated_at", "2022-01-11 02:32:49.348814"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/e4/12/e412c7d68506099714ff4c551898bce9.jpg"], ["chapter_id", 14], ["created_at", "2022-01-11 02:32:49.352910"], ["updated_at", "2022-01-11 02:32:49.352910"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 5], ["created_at", "2022-01-11 02:32:49.357199"], ["updated_at", "2022-01-11 02:32:49.357199"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/ef/e3/efe3f135f43b9088a6d89d29b1d6e22d.jpg"], ["chapter_id", 15], ["created_at", "2022-01-11 02:32:49.361583"], ["updated_at", "2022-01-11 02:32:49.361583"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.7ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/a3/a6/a3a67ef5822adb8026552649c54bae25.jpg"], ["chapter_id", 15], ["created_at", "2022-01-11 02:32:49.365703"], ["updated_at", "2022-01-11 02:32:49.365703"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/dc/a1/dca119dd97a85979b03187ffe257886e.jpg"], ["chapter_id", 15], ["created_at", "2022-01-11 02:32:49.369797"], ["updated_at", "2022-01-11 02:32:49.369797"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Attack-on-Titan"], ["description", "In a reality where humanity isn't the top of the food chain, mankind is forced to live inside cities surrounded by three enormous walls to stay alive. These immense man-eating creatures wander outside the walls, as breaking in would result in catastrophy. Main character Eren Yeager is determined to kill every last one of the creatures, whatever it takes."], ["author", "Hajime Isayama"], ["release_year", "2009"], ["genres", "Tragedy, Action, Psychological"], ["photo_url", "https://mangareader.tv/mangaimage/manga-oa952283.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.374035"], ["updated_at", "2022-01-11 02:32:49.374035"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 6], ["created_at", "2022-01-11 02:32:49.378532"], ["updated_at", "2022-01-11 02:32:49.378532"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/dc/65/dc65750418b3a8e13bb3f9060a853450.jpg"], ["chapter_id", 16], ["created_at", "2022-01-11 02:32:49.382724"], ["updated_at", "2022-01-11 02:32:49.382724"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/4b/39/4b39071e3d7857386fff66afbcf95934.jpg"], ["chapter_id", 16], ["created_at", "2022-01-11 02:32:49.386779"], ["updated_at", "2022-01-11 02:32:49.386779"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/fc/03/fc0390b3eb54e6683438305574aa0bff.jpg"], ["chapter_id", 16], ["created_at", "2022-01-11 02:32:49.390778"], ["updated_at", "2022-01-11 02:32:49.390778"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 6], ["created_at", "2022-01-11 02:32:49.395036"], ["updated_at", "2022-01-11 02:32:49.395036"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/f5/dc/f5dcf9318552d91b23df5922c0dea0c7.jpg"], ["chapter_id", 17], ["created_at", "2022-01-11 02:32:49.399304"], ["updated_at", "2022-01-11 02:32:49.399304"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/e5/8f/e58fbee6a0c13df797a86acd2a6ec786.jpg"], ["chapter_id", 17], ["created_at", "2022-01-11 02:32:49.403588"], ["updated_at", "2022-01-11 02:32:49.403588"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/be/cb/becb04600d181f3b63a1ba06fb501dc2.jpg"], ["chapter_id", 17], ["created_at", "2022-01-11 02:32:49.407844"], ["updated_at", "2022-01-11 02:32:49.407844"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 6], ["created_at", "2022-01-11 02:32:49.412896"], ["updated_at", "2022-01-11 02:32:49.412896"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.7ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/4a/b7/4ab7b4a35b695612badd850a1c9e1edb.jpg"], ["chapter_id", 18], ["created_at", "2022-01-11 02:32:49.417464"], ["updated_at", "2022-01-11 02:32:49.417464"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/c5/b9/c5b9368d5a6e2287b608dc9dfe553337.jpg"], ["chapter_id", 18], ["created_at", "2022-01-11 02:32:49.422795"], ["updated_at", "2022-01-11 02:32:49.422795"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/12/8b/128b9ed8ae790834a3ed49e2cf7ae94a.jpg"], ["chapter_id", 18], ["created_at", "2022-01-11 02:32:49.427139"], ["updated_at", "2022-01-11 02:32:49.427139"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jujutsu-Kaisen"], ["description", "High school student Yuki Itadori becomes the host for a powerful curse named Ryomen Sakuna after swallowing a cursed talisman. He joins a secret school for Jujutsu Sorcerers and becomes set on collecting the other parts of the demon in order to kill it."], ["author", "Gege Akutami"], ["release_year", "2018"], ["genres", "Shounen, Action, Supernatural"], ["photo_url", "https://cm.blazefast.co/56/0f/560fed71d91e99f90db3b53ddcb3e25b.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.431362"], ["updated_at", "2022-01-11 02:32:49.431362"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 7], ["created_at", "2022-01-11 02:32:49.435853"], ["updated_at", "2022-01-11 02:32:49.435853"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/d9/8a/d98abf2f0475f1fa71a8e5847ed422e2.jpg"], ["chapter_id", 19], ["created_at", "2022-01-11 02:32:49.440350"], ["updated_at", "2022-01-11 02:32:49.440350"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/e7/d7/e7d73b2350a0404ccbd5f565e2922b7d.jpg"], ["chapter_id", 19], ["created_at", "2022-01-11 02:32:49.444506"], ["updated_at", "2022-01-11 02:32:49.444506"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/41/e6/41e6733b59bfcde5e7cdb5574e7d59ab.jpg"], ["chapter_id", 19], ["created_at", "2022-01-11 02:32:49.448886"], ["updated_at", "2022-01-11 02:32:49.448886"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 7], ["created_at", "2022-01-11 02:32:49.453306"], ["updated_at", "2022-01-11 02:32:49.453306"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/1b/3a/1b3abdf495db1a12a3382d2fd508797f.jpg"], ["chapter_id", 20], ["created_at", "2022-01-11 02:32:49.457637"], ["updated_at", "2022-01-11 02:32:49.457637"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/80/d7/80d7dd06e7f6982d34f7188873e0f708.jpg"], ["chapter_id", 20], ["created_at", "2022-01-11 02:32:49.461553"], ["updated_at", "2022-01-11 02:32:49.461553"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/97/f8/97f82ae2805486d85c47220d5fd00c73.jpg"], ["chapter_id", 20], ["created_at", "2022-01-11 02:32:49.466867"], ["updated_at", "2022-01-11 02:32:49.466867"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 7], ["created_at", "2022-01-11 02:32:49.471361"], ["updated_at", "2022-01-11 02:32:49.471361"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/02/f2/02f23b191fd14087774d8c2ecdd9c7b0.jpg"], ["chapter_id", 21], ["created_at", "2022-01-11 02:32:49.475846"], ["updated_at", "2022-01-11 02:32:49.475846"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/fd/62/fd623e29815f8a7fb3473c92f0f6760e.jpg"], ["chapter_id", 21], ["created_at", "2022-01-11 02:32:49.479990"], ["updated_at", "2022-01-11 02:32:49.479990"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/89/e4/89e44977c04dd8b58bacdb2cb87594a8.jpg"], ["chapter_id", 21], ["created_at", "2022-01-11 02:32:49.484118"], ["updated_at", "2022-01-11 02:32:49.484118"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boku-No-Hero-Academia"], ["description", "Set in a world where most of the population has powers called quirks, follow the story of Izuku Midoriya, a boy born without any special abilities still set on becoming the number one hero."], ["author", "Kohei Horikoshi"], ["release_year", "2014"], ["genres", "Shounen, Action, Fantasy"], ["photo_url", "https://mangareader.tv/mangaimage/manga-jq951973.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.488479"], ["updated_at", "2022-01-11 02:32:49.488479"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 8], ["created_at", "2022-01-11 02:32:49.492912"], ["updated_at", "2022-01-11 02:32:49.492912"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/66/04/66043f2932243a04d9d5209685c27d96.jpg"], ["chapter_id", 22], ["created_at", "2022-01-11 02:32:49.497342"], ["updated_at", "2022-01-11 02:32:49.497342"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/54/83/54834a8153713da276b8bafba698010c.jpg"], ["chapter_id", 22], ["created_at", "2022-01-11 02:32:49.501624"], ["updated_at", "2022-01-11 02:32:49.501624"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/2b/bb/2bbbcce3ca1d36893e5dff1d77741cf1.jpg"], ["chapter_id", 22], ["created_at", "2022-01-11 02:32:49.505712"], ["updated_at", "2022-01-11 02:32:49.505712"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 8], ["created_at", "2022-01-11 02:32:49.509853"], ["updated_at", "2022-01-11 02:32:49.509853"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/e3/d3/e3d3886aa47385dbfce40a08ac323cb1.jpg"], ["chapter_id", 23], ["created_at", "2022-01-11 02:32:49.514052"], ["updated_at", "2022-01-11 02:32:49.514052"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/66/11/6611edd8297be665163d9ff20ae78ad9.jpg"], ["chapter_id", 23], ["created_at", "2022-01-11 02:32:49.518154"], ["updated_at", "2022-01-11 02:32:49.518154"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/8b/bc/8bbcce9166f2eef5495ba6f8e3fec7ce.jpg"], ["chapter_id", 23], ["created_at", "2022-01-11 02:32:49.522314"], ["updated_at", "2022-01-11 02:32:49.522314"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.7ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 8], ["created_at", "2022-01-11 02:32:49.526473"], ["updated_at", "2022-01-11 02:32:49.526473"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/ad/81/ad816cc07c679798b7bbde294e282c56.jpg"], ["chapter_id", 24], ["created_at", "2022-01-11 02:32:49.531584"], ["updated_at", "2022-01-11 02:32:49.531584"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/d0/7f/d07f498fb2c070dc16fd86706aba51ec.jpg"], ["chapter_id", 24], ["created_at", "2022-01-11 02:32:49.536358"], ["updated_at", "2022-01-11 02:32:49.536358"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/8d/58/8d58aa2e3361511dc0c5287f6a8f0d0e.jpg"], ["chapter_id", 24], ["created_at", "2022-01-11 02:32:49.540536"], ["updated_at", "2022-01-11 02:32:49.540536"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Tokyo-Ghoul"], ["description", "After a date gone wrong college student Ken Kaneki wakes up in the hospital. Due to the surgery performed, he is now half human, half ghoul and is learning how to survive day to day. Ghouls of the coffee shop Anteiku take him under their wing to help him learn to fit into ghoul society and also keep hidden from humans."], ["author", "Sui Ishida"], ["release_year", "2011"], ["genres", "Horror, Action, Supernatural"], ["photo_url", "https://cm.blazefast.co/20/e6/20e63ae38226de2150d1ed8beb44b605.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.544727"], ["updated_at", "2022-01-11 02:32:49.544727"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 9], ["created_at", "2022-01-11 02:32:49.548960"], ["updated_at", "2022-01-11 02:32:49.548960"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/d6/9d/d69dd057bb237653cf1793b2aac5af0b.jpg"], ["chapter_id", 25], ["created_at", "2022-01-11 02:32:49.553283"], ["updated_at", "2022-01-11 02:32:49.553283"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/90/c9/90c9afeee70ff7695a1512540a466e02.jpg"], ["chapter_id", 25], ["created_at", "2022-01-11 02:32:49.557336"], ["updated_at", "2022-01-11 02:32:49.557336"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/44/b8/44b86ce16a61588a2e05d3e58c57ad2a.jpg"], ["chapter_id", 25], ["created_at", "2022-01-11 02:32:49.561400"], ["updated_at", "2022-01-11 02:32:49.561400"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 9], ["created_at", "2022-01-11 02:32:49.565691"], ["updated_at", "2022-01-11 02:32:49.565691"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/22/92/22928f47d810fc46b776c98452cc918a.jpg"], ["chapter_id", 26], ["created_at", "2022-01-11 02:32:49.569942"], ["updated_at", "2022-01-11 02:32:49.569942"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/6a/da/6adace8c3e3f529e1c111f02be53b3d6.jpg"], ["chapter_id", 26], ["created_at", "2022-01-11 02:32:49.574152"], ["updated_at", "2022-01-11 02:32:49.574152"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/29/32/29320348d3050f485f912683b5692ab6.jpg"], ["chapter_id", 26], ["created_at", "2022-01-11 02:32:49.577931"], ["updated_at", "2022-01-11 02:32:49.577931"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 9], ["created_at", "2022-01-11 02:32:49.582434"], ["updated_at", "2022-01-11 02:32:49.582434"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/8a/ae/8aae77106dbe3129f3965e847120eabe.jpg"], ["chapter_id", 27], ["created_at", "2022-01-11 02:32:49.586875"], ["updated_at", "2022-01-11 02:32:49.586875"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/fe/b1/feb1bb2ae3701470c985dca4c13e9bfc.jpg"], ["chapter_id", 27], ["created_at", "2022-01-11 02:32:49.591055"], ["updated_at", "2022-01-11 02:32:49.591055"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/b9/27/b927113998b3d752073e917100863288.jpg"], ["chapter_id", 27], ["created_at", "2022-01-11 02:32:49.595231"], ["updated_at", "2022-01-11 02:32:49.595231"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Neon-Genesis-Evangelion"], ["description", "The world is currently facing the threat of montstrous celestial beings called Angels. As they invade Tokyo mankind is unable to defend themselves, this leaves humanity to rely on the mysterious organization NERV. This group operates giant humanoid robots to combat the Angels with their more advanced weaponry."], ["author", "Ikuto Yamashita"], ["release_year", "1994"], ["genres", "Drama, Action, Fantasy"], ["photo_url", "https://mangareader.tv/mangaimage/manga-vx972906.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.599436"], ["updated_at", "2022-01-11 02:32:49.599436"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 10], ["created_at", "2022-01-11 02:32:49.603813"], ["updated_at", "2022-01-11 02:32:49.603813"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a3/67/a367cb685cd8a1e505bb62b4ad32d6bd.jpg"], ["chapter_id", 28], ["created_at", "2022-01-11 02:32:49.608086"], ["updated_at", "2022-01-11 02:32:49.608086"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/a2/17/a2171b15fae281bab16a4bfc14cf1a8e.jpg"], ["chapter_id", 28], ["created_at", "2022-01-11 02:32:49.613449"], ["updated_at", "2022-01-11 02:32:49.613449"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/5e/c1/5ec126c4a71f727bfb872a9c48b23a06.jpg"], ["chapter_id", 28], ["created_at", "2022-01-11 02:32:49.617883"], ["updated_at", "2022-01-11 02:32:49.617883"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 10], ["created_at", "2022-01-11 02:32:49.622274"], ["updated_at", "2022-01-11 02:32:49.622274"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/20/eb/20eb496776b95dd2ce6364ab3de1314a.jpg"], ["chapter_id", 29], ["created_at", "2022-01-11 02:32:49.626619"], ["updated_at", "2022-01-11 02:32:49.626619"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/2e/80/2e80da0f547368d7c948496bbb3fbfff.jpg"], ["chapter_id", 29], ["created_at", "2022-01-11 02:32:49.630822"], ["updated_at", "2022-01-11 02:32:49.630822"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/f5/c8/f5c8777ee231057314fca05405e4d540.jpg"], ["chapter_id", 29], ["created_at", "2022-01-11 02:32:49.634949"], ["updated_at", "2022-01-11 02:32:49.634949"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 10], ["created_at", "2022-01-11 02:32:49.639255"], ["updated_at", "2022-01-11 02:32:49.639255"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a2/da/a2dafabdf83e87d80cb9be21af36d846.jpg"], ["chapter_id", 30], ["created_at", "2022-01-11 02:32:49.643590"], ["updated_at", "2022-01-11 02:32:49.643590"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/9b/e2/9be2ac0be9612853c220e1802c4c5ee2.jpg"], ["chapter_id", 30], ["created_at", "2022-01-11 02:32:49.647746"], ["updated_at", "2022-01-11 02:32:49.647746"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/82/88/8288fba57c7707e499cf3b1a17292797.jpg"], ["chapter_id", 30], ["created_at", "2022-01-11 02:32:49.651820"], ["updated_at", "2022-01-11 02:32:49.651820"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Akira"], ["description", "In a post apocolyptic Neo-Tokyo, a group consisting of a teen biker gang leader named Kaneda, a military leader, a trio of espers, and a militant revolutionary all attempt to prevent Kaneda's childhood friend from using is unstable abilitys to wreak havoc on the city."], ["author", "Katsuhiro Otomo"], ["release_year", "1982"], ["genres", "Drama, Action, Sci fi"], ["photo_url", "https://mangareader.tv/mangaimage/manga-nn960522.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.656085"], ["updated_at", "2022-01-11 02:32:49.656085"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 11], ["created_at", "2022-01-11 02:32:49.660437"], ["updated_at", "2022-01-11 02:32:49.660437"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/87/b2/87b24fd8a4bb76b6fbbf89c9ebcd819b.jpg"], ["chapter_id", 31], ["created_at", "2022-01-11 02:32:49.664663"], ["updated_at", "2022-01-11 02:32:49.664663"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/6d/c8/6dc8917545d416a345f842c3d8708413.jpg"], ["chapter_id", 31], ["created_at", "2022-01-11 02:32:49.668710"], ["updated_at", "2022-01-11 02:32:49.668710"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/97/a0/97a0c75494ee6f734e264e85affad945.jpg"], ["chapter_id", 31], ["created_at", "2022-01-11 02:32:49.672759"], ["updated_at", "2022-01-11 02:32:49.672759"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.7ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 11], ["created_at", "2022-01-11 02:32:49.677184"], ["updated_at", "2022-01-11 02:32:49.677184"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (1.0ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/b9/72/b972a6d9c3385f3d4ca575c0fecbbd76.jpg"], ["chapter_id", 32], ["created_at", "2022-01-11 02:32:49.682786"], ["updated_at", "2022-01-11 02:32:49.682786"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (1.2ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/5e/3e/5e3e99f6e9af5223c588f97fc14c9e0f.jpg"], ["chapter_id", 32], ["created_at", "2022-01-11 02:32:49.688270"], ["updated_at", "2022-01-11 02:32:49.688270"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (1.2ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/e2/f0/e2f0297b46085392073205611e71ecea.jpg"], ["chapter_id", 32], ["created_at", "2022-01-11 02:32:49.694112"], ["updated_at", "2022-01-11 02:32:49.694112"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.7ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 11], ["created_at", "2022-01-11 02:32:49.699670"], ["updated_at", "2022-01-11 02:32:49.699670"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/10/71/1071c04bd93201218de2c41c89713aa3.jpg"], ["chapter_id", 33], ["created_at", "2022-01-11 02:32:49.705626"], ["updated_at", "2022-01-11 02:32:49.705626"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/05/b4/05b41d62c44273a151f7a5634dd08731.jpg"], ["chapter_id", 33], ["created_at", "2022-01-11 02:32:49.710545"], ["updated_at", "2022-01-11 02:32:49.710545"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/ef/33/ef333507ea01e592ef2427b13b6b9a8a.jpg"], ["chapter_id", 33], ["created_at", "2022-01-11 02:32:49.714572"], ["updated_at", "2022-01-11 02:32:49.714572"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Kimetsu-No-Yaiba"], ["description", "The main character Tanjiro is determined to help his younger sister, who was transformed into a demon after their family was killed by a demon. This story follows Tanjiro's path to turn his sister back into a human in a Taisho Era Japan that is infested with demons."], ["author", "Koyoharu Gotouge"], ["release_year", "2016"], ["genres", "Adventure, Historical, Fantasy"], ["photo_url", "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Demon_Slayer_-_Kimetsu_no_Yaiba%2C_volume_1.jpg/220px-Demon_Slayer_-_Kimetsu_no_Yaiba%2C_volume_1.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.718841"], ["updated_at", "2022-01-11 02:32:49.718841"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 12], ["created_at", "2022-01-11 02:32:49.723262"], ["updated_at", "2022-01-11 02:32:49.723262"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/74/2e/742ef0310431998cc256e4b733209420.jpg"], ["chapter_id", 34], ["created_at", "2022-01-11 02:32:49.727511"], ["updated_at", "2022-01-11 02:32:49.727511"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/31/92/3192262928535e040efc57c1ef0d6707.jpg"], ["chapter_id", 34], ["created_at", "2022-01-11 02:32:49.731493"], ["updated_at", "2022-01-11 02:32:49.731493"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/a3/ee/a3eef75cc220a3d7c2a8d5693fdee383.jpg"], ["chapter_id", 34], ["created_at", "2022-01-11 02:32:49.735581"], ["updated_at", "2022-01-11 02:32:49.735581"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 12], ["created_at", "2022-01-11 02:32:49.739609"], ["updated_at", "2022-01-11 02:32:49.739609"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/ba/62/ba628e001bffdf018b096fe015c64941.jpghttps://cm.blazefast.co/ba/62/ba628e001bffdf018b096fe015c64941.jpg"], ["chapter_id", 35], ["created_at", "2022-01-11 02:32:49.745059"], ["updated_at", "2022-01-11 02:32:49.745059"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/01/53/0153a3472cbdde03c40174d0acbe8490.jpg"], ["chapter_id", 35], ["created_at", "2022-01-11 02:32:49.749443"], ["updated_at", "2022-01-11 02:32:49.749443"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/af/26/af26e0511c24bd689144d6c0992b62c8.jpg"], ["chapter_id", 35], ["created_at", "2022-01-11 02:32:49.753652"], ["updated_at", "2022-01-11 02:32:49.753652"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 12], ["created_at", "2022-01-11 02:32:49.757876"], ["updated_at", "2022-01-11 02:32:49.757876"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/b5/d9/b5d9508f10b993c982ad98575e9a7e35.jpg"], ["chapter_id", 36], ["created_at", "2022-01-11 02:32:49.762167"], ["updated_at", "2022-01-11 02:32:49.762167"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/3b/c8/3bc86832b96af064c374d6e600f54632.jpg"], ["chapter_id", 36], ["created_at", "2022-01-11 02:32:49.766348"], ["updated_at", "2022-01-11 02:32:49.766348"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/98/a8/98a853adb26687a8052909ae297d8167.jpg"], ["chapter_id", 36], ["created_at", "2022-01-11 02:32:49.770489"], ["updated_at", "2022-01-11 02:32:49.770489"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Cowboy-Bebop"], ["description", "Follows the story of four bounty hunters that crossed paths and the adventures they have aboard their ship, Bebop."], ["author", "Nanten Yatate"], ["release_year", "1998"], ["genres", "Adventure, Comedy, Sci Fi"], ["photo_url", "https://mangareader.tv/mangaimage/manga-vr956126.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.774750"], ["updated_at", "2022-01-11 02:32:49.774750"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 13], ["created_at", "2022-01-11 02:32:49.779226"], ["updated_at", "2022-01-11 02:32:49.779226"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a1/4b/a14b300a7d1f8ae65e769c40b8da0474.jpg"], ["chapter_id", 37], ["created_at", "2022-01-11 02:32:49.783547"], ["updated_at", "2022-01-11 02:32:49.783547"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/42/1c/421c3033046a93f6db465fcbc17f37ac.jpg"], ["chapter_id", 37], ["created_at", "2022-01-11 02:32:49.787621"], ["updated_at", "2022-01-11 02:32:49.787621"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/42/dd/42ddf7c2d822383b6d2574135e4175c8.jpg"], ["chapter_id", 37], ["created_at", "2022-01-11 02:32:49.791615"], ["updated_at", "2022-01-11 02:32:49.791615"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 13], ["created_at", "2022-01-11 02:32:49.795908"], ["updated_at", "2022-01-11 02:32:49.795908"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/83/43/8343b1187efad079dc3735e2a37fab34.jpg"], ["chapter_id", 38], ["created_at", "2022-01-11 02:32:49.800186"], ["updated_at", "2022-01-11 02:32:49.800186"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/25/bd/25bd4941adb9b2479c7b43867d20eb27.jpg"], ["chapter_id", 38], ["created_at", "2022-01-11 02:32:49.804293"], ["updated_at", "2022-01-11 02:32:49.804293"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/8b/a0/8ba09340b1336649f13904da1ddf12c3.jpg"], ["chapter_id", 38], ["created_at", "2022-01-11 02:32:49.808357"], ["updated_at", "2022-01-11 02:32:49.808357"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 13], ["created_at", "2022-01-11 02:32:49.812558"], ["updated_at", "2022-01-11 02:32:49.812558"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/d0/44/d04443d7c843a31d7434d08c3e8ab695.jpg"], ["chapter_id", 39], ["created_at", "2022-01-11 02:32:49.816599"], ["updated_at", "2022-01-11 02:32:49.816599"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/da/ba/dabab50caf555bddbf3a85bb71fee238.jpg"], ["chapter_id", 39], ["created_at", "2022-01-11 02:32:49.820610"], ["updated_at", "2022-01-11 02:32:49.820610"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/5c/f8/5cf8b9cd52e1f24b5e5871c10b94c5cd.jpg"], ["chapter_id", 39], ["created_at", "2022-01-11 02:32:49.824517"], ["updated_at", "2022-01-11 02:32:49.824517"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Vampire-Knight"], ["description", "Yuki Cross's earliest memory is being attacked on a snowy night by a vampire and then being rescued by a different vampire named Kaname Kuran. She ends up being taken in by the headmaster of Cross Academy, an elite boarding school and she's uusually accompanied by her childhood friend Zero Kiryu. As she struggles to find out the truth of her past she wonders if knowing will do more harm than good."], ["author", "Matsuri Hino"], ["release_year", "2005"], ["genres", "Drama, Romance, Supernatural"], ["photo_url", "https://mangareader.tv/mangaimage/manga-jv954878.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.828664"], ["updated_at", "2022-01-11 02:32:49.828664"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 14], ["created_at", "2022-01-11 02:32:49.832874"], ["updated_at", "2022-01-11 02:32:49.832874"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/79/75/79755098e98c93f3b9805c0c3ebafbd7.jpg"], ["chapter_id", 40], ["created_at", "2022-01-11 02:32:49.837155"], ["updated_at", "2022-01-11 02:32:49.837155"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/e6/6b/e66bc0e7b923fd8a2f422b19142837ba.jpg"], ["chapter_id", 40], ["created_at", "2022-01-11 02:32:49.841250"], ["updated_at", "2022-01-11 02:32:49.841250"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/68/f1/68f1b1f4f282df7b69be61c057bbf680.jpg"], ["chapter_id", 40], ["created_at", "2022-01-11 02:32:49.845196"], ["updated_at", "2022-01-11 02:32:49.845196"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 14], ["created_at", "2022-01-11 02:32:49.849307"], ["updated_at", "2022-01-11 02:32:49.849307"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/ba/b4/bab486b5e6db7f8cea07a41b63c83e3f.jpg"], ["chapter_id", 41], ["created_at", "2022-01-11 02:32:49.853582"], ["updated_at", "2022-01-11 02:32:49.853582"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/73/eb/73eb14b8289eed4be0e78fcdf18f3c6d.jpg"], ["chapter_id", 41], ["created_at", "2022-01-11 02:32:49.857378"], ["updated_at", "2022-01-11 02:32:49.857378"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/ca/a1/caa11ba26dc030c6e5c5e6d5fd553794.jpg"], ["chapter_id", 41], ["created_at", "2022-01-11 02:32:49.861490"], ["updated_at", "2022-01-11 02:32:49.861490"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 14], ["created_at", "2022-01-11 02:32:49.865711"], ["updated_at", "2022-01-11 02:32:49.865711"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a8/dc/a8dc204eeee4d6feb28b471efde70a85.jpg"], ["chapter_id", 42], ["created_at", "2022-01-11 02:32:49.870115"], ["updated_at", "2022-01-11 02:32:49.870115"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/da/4a/da4a0f3546d36ab515461b3a02640a52.jpg"], ["chapter_id", 42], ["created_at", "2022-01-11 02:32:49.874322"], ["updated_at", "2022-01-11 02:32:49.874322"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/bf/c1/bfc15958a4b79897434145ef5c318809.jpg"], ["chapter_id", 42], ["created_at", "2022-01-11 02:32:49.878438"], ["updated_at", "2022-01-11 02:32:49.878438"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.5ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Seraph-of-the-End"], ["description", "Due to a strange virus that kills anyone above the age of thirteen, humanity becomes enslaved by power-hungry vampires whose goal is to overtake the society. The story follows two young boys named Yuuichirou and Mikaela who were taken captive from an orphanage. However unlike the other children, Mikaela is dissatisfied with being treated like livestock and plans to rebel in order to escape even if he is nearly doomed to fail and this ends up costing him. Yuuichirou, years later joins the Japanese Imperial Demon Army in order to take revenge."], ["author", "Takaya Kagami"], ["release_year", "2012"], ["genres", "Action, Mystery, Supernatural"], ["photo_url", "https://cm.blazefast.co/16/48/1648742a31ddafde948fec95d4d8c5f0.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.882603"], ["updated_at", "2022-01-11 02:32:49.882603"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 15], ["created_at", "2022-01-11 02:32:49.888273"], ["updated_at", "2022-01-11 02:32:49.888273"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/6c/7c/6c7c437333b23d5d2c61b8f4aabec5be.jpg"], ["chapter_id", 43], ["created_at", "2022-01-11 02:32:49.892776"], ["updated_at", "2022-01-11 02:32:49.892776"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/1a/0d/1a0db534d3c4df5bdbfb7d7441d960d0.jpg"], ["chapter_id", 43], ["created_at", "2022-01-11 02:32:49.896894"], ["updated_at", "2022-01-11 02:32:49.896894"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/5a/1f/5a1f3546b612f71d4121c551bdaa28db.jpg"], ["chapter_id", 43], ["created_at", "2022-01-11 02:32:49.901171"], ["updated_at", "2022-01-11 02:32:49.901171"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 15], ["created_at", "2022-01-11 02:32:49.905409"], ["updated_at", "2022-01-11 02:32:49.905409"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/18/96/1896215888fb8c778beffb8bda5029b3.jpg"], ["chapter_id", 44], ["created_at", "2022-01-11 02:32:49.909769"], ["updated_at", "2022-01-11 02:32:49.909769"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/f6/02/f6025e0954f746fb11684d9be40539aa.jpg"], ["chapter_id", 44], ["created_at", "2022-01-11 02:32:49.914031"], ["updated_at", "2022-01-11 02:32:49.914031"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/42/7a/427af37e585a9d0cd9c76719bfec1ca9.jpg"], ["chapter_id", 44], ["created_at", "2022-01-11 02:32:49.918234"], ["updated_at", "2022-01-11 02:32:49.918234"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 15], ["created_at", "2022-01-11 02:32:49.922460"], ["updated_at", "2022-01-11 02:32:49.922460"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/16/13/161348cd04715e6b5b490c19ffcd29cb.jpg"], ["chapter_id", 45], ["created_at", "2022-01-11 02:32:49.926731"], ["updated_at", "2022-01-11 02:32:49.926731"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/2a/eb/2aebf3a1e5ffcfa5f9361ff7f3a8d51a.jpg"], ["chapter_id", 45], ["created_at", "2022-01-11 02:32:49.931291"], ["updated_at", "2022-01-11 02:32:49.931291"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/94/77/9477e81cc1cde775864bad3d854d2e40.jpg"], ["chapter_id", 45], ["created_at", "2022-01-11 02:32:49.935630"], ["updated_at", "2022-01-11 02:32:49.935630"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.6ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Sword-Art-Online"], ["description", "Set in a not so distant future where virtual reality has made a complete breakthrough in technology to the exent that players can use just their thoughts to control their character in a large online role-playing game called Sword Art Online. Amidst the ten thousand players first to try out the game, Kazuto Kirigaya the main subject of the story. It doesn't take long before all the players realized that they were unable to log out of the game, follow Kazuto's journey to make it out of the game, or die trying."], ["author", "Reki Kawahara"], ["release_year", "2012"], ["genres", "Shounen, Adventure, Fantasy"], ["photo_url", "https://mangareader.tv/mangaimage/manga-ng964441.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.939871"], ["updated_at", "2022-01-11 02:32:49.939871"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 16], ["created_at", "2022-01-11 02:32:49.944672"], ["updated_at", "2022-01-11 02:32:49.944672"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.7ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/c0/9e/c09ea99be61a4569b1be13653f30222d.jpg"], ["chapter_id", 46], ["created_at", "2022-01-11 02:32:49.948966"], ["updated_at", "2022-01-11 02:32:49.948966"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/2f/d6/2fd65ed2e5ef7456cd47d95ca74c0110.jpg"], ["chapter_id", 46], ["created_at", "2022-01-11 02:32:49.953981"], ["updated_at", "2022-01-11 02:32:49.953981"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/f3/7c/f37cafadd19d6a85b68413e0b3762109.jpg"], ["chapter_id", 46], ["created_at", "2022-01-11 02:32:49.958148"], ["updated_at", "2022-01-11 02:32:49.958148"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 16], ["created_at", "2022-01-11 02:32:49.962283"], ["updated_at", "2022-01-11 02:32:49.962283"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/53/da/53daef195f8faabfcfca76bc944f8476.jpg"], ["chapter_id", 47], ["created_at", "2022-01-11 02:32:49.966531"], ["updated_at", "2022-01-11 02:32:49.966531"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/78/7f/787fed0adefce998149e1c99c90b04ec.jpg"], ["chapter_id", 47], ["created_at", "2022-01-11 02:32:49.970296"], ["updated_at", "2022-01-11 02:32:49.970296"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/79/ca/79caa84e39d82a4fb135428cd9a796b6.jpg"], ["chapter_id", 47], ["created_at", "2022-01-11 02:32:49.974454"], ["updated_at", "2022-01-11 02:32:49.974454"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 16], ["created_at", "2022-01-11 02:32:49.978503"], ["updated_at", "2022-01-11 02:32:49.978503"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/b6/0a/b60ae4f36a43526cc40d1947dbb030ea.jpg"], ["chapter_id", 48], ["created_at", "2022-01-11 02:32:49.982842"], ["updated_at", "2022-01-11 02:32:49.982842"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/d1/d8/d1d894bbbbe0e64615b9f31634a08823.jpg"], ["chapter_id", 48], ["created_at", "2022-01-11 02:32:49.986893"], ["updated_at", "2022-01-11 02:32:49.986893"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/8d/54/8d548ce312443c7d14e201dc36942e36.jpg"], ["chapter_id", 48], ["created_at", "2022-01-11 02:32:49.990984"], ["updated_at", "2022-01-11 02:32:49.990984"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.8ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Inuyasha"], ["description", "A young girl named Kagome Higarushi gets takem five hundred years in the past during Japan's Sengoku period after a demon dragged her into a cursed well. The demon's true target, however, is a wish-granting jewel called the Skikon Jewel that was reborn inside of her. When the sacred jewel gets shattered after a run-in with a revived demon, she enlists the help of a dog/demon/human hybrid named Inuyasha to help collect the pieces and keep them from ending up in the wrong hands."], ["author", "Rumiko Takahashi"], ["release_year", "1996"], ["genres", "Comedy, Action, Fantasy"], ["photo_url", "https://mangareader.tv/mangaimage/manga-bg956663.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:49.995145"], ["updated_at", "2022-01-11 02:32:49.995145"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 17], ["created_at", "2022-01-11 02:32:49.999982"], ["updated_at", "2022-01-11 02:32:49.999982"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/f9/92/f992c972262b5d96d9c5bc4fb1d48285.jpg"], ["chapter_id", 49], ["created_at", "2022-01-11 02:32:50.004152"], ["updated_at", "2022-01-11 02:32:50.004152"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/24/a8/24a809868784736a37667253f6c54e3b.jpg"], ["chapter_id", 49], ["created_at", "2022-01-11 02:32:50.008616"], ["updated_at", "2022-01-11 02:32:50.008616"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/88/fa/88fabc41f3f55b8609cc7cb1394502b4.jpg"], ["chapter_id", 49], ["created_at", "2022-01-11 02:32:50.013255"], ["updated_at", "2022-01-11 02:32:50.013255"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 17], ["created_at", "2022-01-11 02:32:50.017551"], ["updated_at", "2022-01-11 02:32:50.017551"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/b0/6b/b06b62550bf17d6ca5cc1b6fbb00bc45.jpg"], ["chapter_id", 50], ["created_at", "2022-01-11 02:32:50.021978"], ["updated_at", "2022-01-11 02:32:50.021978"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/be/91/be91f1b77812f20c5cb2547ecd12c165.jpg"], ["chapter_id", 50], ["created_at", "2022-01-11 02:32:50.026414"], ["updated_at", "2022-01-11 02:32:50.026414"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/04/1e/041ee9818bf11acadd81e6016ba98429.jpg"], ["chapter_id", 50], ["created_at", "2022-01-11 02:32:50.030426"], ["updated_at", "2022-01-11 02:32:50.030426"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 17], ["created_at", "2022-01-11 02:32:50.036040"], ["updated_at", "2022-01-11 02:32:50.036040"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/aa/8e/aa8e985837729aa34fc7cb86b7e7e53e.jpg"], ["chapter_id", 51], ["created_at", "2022-01-11 02:32:50.040526"], ["updated_at", "2022-01-11 02:32:50.040526"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/7d/ea/7dea45ddb0c88691f4c0e5923e410b1a.jpg"], ["chapter_id", 51], ["created_at", "2022-01-11 02:32:50.044666"], ["updated_at", "2022-01-11 02:32:50.044666"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/15/1b/151b41eebe22de48b3681cf419d1f526.jpg"], ["chapter_id", 51], ["created_at", "2022-01-11 02:32:50.048789"], ["updated_at", "2022-01-11 02:32:50.048789"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComic Create (0.4ms)[0m  [1m[32mINSERT INTO "comics" ("name", "description", "author", "release_year", "genres", "photo_url", "total_rating", "total_votes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fate-Stay-Night"], ["description", "This follows the story of a mage by the name of Shirou Emiya, who was orphaned after a mysterious inferno killed his family. Shirou ends up confronted by two superhumans known as Servants and barely escapes with his life. The Servent set on finishing him off, Shirou is forced to summon a Servent of his own. Him and the Servent he summoned were obligated to participate in the Fifth Holy Grail War, which is a battle of Servents and the mages who summoned them. The prize to whoever wins being the Holy Grail itself."], ["author", "Dat Nishiwaki"], ["release_year", "2005"], ["genres", "Supernatural, Action, Fantasy"], ["photo_url", "https://mangareader.tv/mangaimage/manga-dy959507.jpg"], ["total_rating", "0"], ["total_votes", "0"], ["created_at", "2022-01-11 02:32:50.053092"], ["updated_at", "2022-01-11 02:32:50.053092"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 1"], ["chapter_number", "1"], ["total_pages", "3"], ["comic_id", 18], ["created_at", "2022-01-11 02:32:50.057575"], ["updated_at", "2022-01-11 02:32:50.057575"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/a3/0d/a30d4ab460a6d44ed929d5284cb51bdb.jpg"], ["chapter_id", 52], ["created_at", "2022-01-11 02:32:50.061923"], ["updated_at", "2022-01-11 02:32:50.061923"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/e8/68/e868addbf89d5bde08b8d4fe4b518317.jpg"], ["chapter_id", 52], ["created_at", "2022-01-11 02:32:50.066084"], ["updated_at", "2022-01-11 02:32:50.066084"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/c8/6b/c86bede2f05e7ac43c383448459d5052.jpg"], ["chapter_id", 52], ["created_at", "2022-01-11 02:32:50.070326"], ["updated_at", "2022-01-11 02:32:50.070326"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.4ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 2"], ["chapter_number", "2"], ["total_pages", "3"], ["comic_id", 18], ["created_at", "2022-01-11 02:32:50.074512"], ["updated_at", "2022-01-11 02:32:50.074512"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/ae/9f/ae9f3fdd7eb5edfad863a7e16491af82.jpg"], ["chapter_id", 53], ["created_at", "2022-01-11 02:32:50.078746"], ["updated_at", "2022-01-11 02:32:50.078746"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/86/9f/869f89c8a6ee112fd531e07b7afb73f7.jpg"], ["chapter_id", 53], ["created_at", "2022-01-11 02:32:50.082867"], ["updated_at", "2022-01-11 02:32:50.082867"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/90/54/90549b0744f47c4e07cf7402502702c2.jpg"], ["chapter_id", 53], ["created_at", "2022-01-11 02:32:50.086911"], ["updated_at", "2022-01-11 02:32:50.086911"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChapter Create (0.5ms)[0m  [1m[32mINSERT INTO "chapters" ("title", "chapter_number", "total_pages", "comic_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chapter 3"], ["chapter_number", "3"], ["total_pages", "3"], ["comic_id", 18], ["created_at", "2022-01-11 02:32:50.091102"], ["updated_at", "2022-01-11 02:32:50.091102"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "1"], ["page_url", "https://cm.blazefast.co/59/d1/59d124914799305bf2f62b87be1d44c0.jpg"], ["chapter_id", 54], ["created_at", "2022-01-11 02:32:50.095594"], ["updated_at", "2022-01-11 02:32:50.095594"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "2"], ["page_url", "https://cm.blazefast.co/5c/59/5c59bf1b1eb1b55262a2e8c264e04095.jpg"], ["chapter_id", 54], ["created_at", "2022-01-11 02:32:50.100460"], ["updated_at", "2022-01-11 02:32:50.100460"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPage Create (0.4ms)[0m  [1m[32mINSERT INTO "pages" ("page_number", "page_url", "chapter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["page_number", "3"], ["page_url", "https://cm.blazefast.co/a1/1e/a11e5a8b82191242a04fbf3d32c80314.jpg"], ["chapter_id", 54], ["created_at", "2022-01-11 02:32:50.104590"], ["updated_at", "2022-01-11 02:32:50.104590"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-01-10 21:33:17 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 321)
+  Rendered layout layouts/application.html.erb (Duration: 4503.6ms | Allocations: 2999652)
+Completed 200 OK in 4515ms (Views: 4510.4ms | ActiveRecord: 0.0ms | Allocations: 3002861)
+
+
+Started GET "/api/v1/comics?order=newest" for ::1 at 2022-01-10 21:33:24 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"newest"}
+  [1m[36mComic Load (1.3ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."release_year" DESC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:6:in `index'
+No serializer found for resource: #<Comic id: 7, name: "Jujutsu-Kaisen", description: "High school student Yuki Itadori becomes the host ...", author: "Gege Akutami", release_year: "2018", genres: "Shounen, Action, Supernatural", photo_url: "https://cm.blazefast.co/56/0f/560fed71d91e99f90db3...", total_rating: "0", total_votes: "0", created_at: "2022-01-11 02:32:49.431362000 +0000", updated_at: "2022-01-11 02:32:49.431362000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (3.09ms)
+Completed 200 OK in 60ms (Views: 40.3ms | ActiveRecord: 9.1ms | Allocations: 30465)
+
+
+Started GET "/" for ::1 at 2022-01-10 21:36:34 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 28186)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms | Allocations: 28470)
+
+
+Started GET "/api/v1/comics?order=oldest" for ::1 at 2022-01-10 21:36:36 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"oldest"}
+  [1m[36mComic Load (1.9ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."release_year" ASC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:8:in `index'
+No serializer found for resource: #<Comic id: 11, name: "Akira", description: "In a post apocolyptic Neo-Tokyo, a group consistin...", author: "Katsuhiro Otomo", release_year: "1982", genres: "Drama, Action, Sci fi", photo_url: "https://mangareader.tv/mangaimage/manga-nn960522.j...", total_rating: "0", total_votes: "0", created_at: "2022-01-11 02:32:49.656085000 +0000", updated_at: "2022-01-11 02:32:49.656085000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (7.12ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 1.9ms | Allocations: 4101)
+
+
+Started GET "/" for ::1 at 2022-01-10 21:36:39 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 27285)
+Completed 200 OK in 56ms (Views: 56.1ms | ActiveRecord: 0.0ms | Allocations: 27524)
+
+
+Started GET "/api/v1/comics?order=alphabetic" for ::1 at 2022-01-10 21:36:41 -0500
+Processing by Api::V1::ComicsController#index as */*
+  Parameters: {"order"=>"alphabetic"}
+  [1m[36mComic Load (3.0ms)[0m  [1m[34mSELECT "comics".* FROM "comics" ORDER BY "comics"."name" ASC[0m
+  ↳ app/controllers/api/v1/comics_controller.rb:4:in `index'
+No serializer found for resource: #<Comic id: 11, name: "Akira", description: "In a post apocolyptic Neo-Tokyo, a group consistin...", author: "Katsuhiro Otomo", release_year: "1982", genres: "Drama, Action, Sci fi", photo_url: "https://mangareader.tv/mangaimage/manga-nn960522.j...", total_rating: "0", total_votes: "0", created_at: "2022-01-11 02:32:49.656085000 +0000", updated_at: "2022-01-11 02:32:49.656085000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comic::ActiveRecord_Relation (2.75ms)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 3.0ms | Allocations: 4086)
+
+
+Started GET "/" for ::1 at 2022-01-10 21:36:46 -0500
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 27331)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 27575)
+
+
