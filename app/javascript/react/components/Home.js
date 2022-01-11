@@ -10,6 +10,7 @@ const Home = (props) =>{
               <Link className="button-box" to='/comics?order=alphabetic'>A-Z</Link>
               <Link className="button-box" to='/comics?order=newest'>Newest</Link>
               <Link className="button-box" to='/comics?order=oldest'>Oldest</Link>
+              <Link className="button-box" to='/comics?order='>Unordered</Link>
             </div>
         </div>
     )
