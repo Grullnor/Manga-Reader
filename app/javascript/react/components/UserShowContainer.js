@@ -38,10 +38,15 @@ const UserShowContainer = (props) => {
   })
 
   return (
-    <div>
-      {user.user_name}
-      {user.email}
-      {bookmarkTiles}
+    <div className='user-page'>
+      <div className='user-page user-info'>
+          <div className='user-info-text'>
+            User Email: {user.email}
+          </div>
+      </div>
+      <div className='bookmark-tiles-container'>
+        {bookmarkTiles}
+      </div>
     </div>
   )
 }

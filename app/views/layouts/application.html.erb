@@ -7,26 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 
-<div class="top-bar">
-  <h1 class="top-bar-left"><%= link_to 'Mangareader', root_path %></h1>
-  <div class="top-bar-right">
-    <% if signed_in? %>
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-link"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-      </ul>
-    <% else %>
-      <ul class="menu">
-        <li class="menu-link"><%= link_to "Sign In", new_user_session_path %></li>
-        <li class="menu-link"><%= link_to "Sign Up", new_user_registration_path %></li>
-      </ul>
-    <% end %>
-  </div>
-</div>
+<div class="background">
+  <div class="background-body">
+    <div class="top-bar">
+      <h1 class="top-bar-left"><%= link_to 'Mangareader', root_path %></h1>
+      <div class="top-bar-right">
+        <% if signed_in? %>
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-link"><%= link_to "User Profile", '/user_profile' %></li>
+            <li class="menu-link"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        <% else %>
+          <ul class="dropdown menu">
+            <li class="menu-link"><%= link_to "Sign In", new_user_session_path %></li>
+            <li class="menu-link"><%= link_to "Sign Up", new_user_registration_path %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+
 
 <body>
 
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
+    <div class="header" flash flash-<%= key %>">
       <%= value %>
     </div>
   <%- end -%>
@@ -44,4 +48,7 @@
   
   <%= yield :extra_footer %>
 </body>
+</div>
+</div>
+
 </html>

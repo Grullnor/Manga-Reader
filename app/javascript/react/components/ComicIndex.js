@@ -2,15 +2,15 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const ComicTile = (props) => {
+  const displayName = props.name.replaceAll('-', ' ')
+
   return (
-    <div>
       <Link to={`/comics/${props.name}`}>
-        <img src={props.photo_url} />
-        <div>
-          {props.name}
+        <img className="comic-photo" src={props.photo_url} />
+        <div className="comic-photo-text">
+          {displayName}
         </div>
       </Link>
-    </div>
   )
 }
 

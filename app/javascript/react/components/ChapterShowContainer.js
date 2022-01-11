@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react"
 import PageTile from "./ChapterShow"
 
 const ChapterShowContainer = (props) => {
-  const [chapter, setChapter] = useState({
+  const [numOfChapters, setNumOfChapters] = useState(0)
+  const [chapter, setChapter] = useState(
+    {
       id: "",
       title: "",
       chapter_number: "",
@@ -13,9 +15,10 @@ const ChapterShowContainer = (props) => {
           page_url: ""
         }
       ]
-  })
+    }
+  )
 
-  const fetchData = async () => {
+  const fetchChapterData = async () => {
     try {
       const response = await fetch(`/api/v1/chapters/${props.match.params.name}?chapter=${props.match.params.id}`)
       if (!response.ok) {
@@ -30,23 +33,39 @@ const ChapterShowContainer = (props) => {
     }
   }
 
+  const fetchChapterListData = async () => {
+    try {
+      const response = await fetch(`/api/v1/comics/${props.match.params.name}?source=chapter_show`)
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw error
+      }
+      const chapterData = await response.json()
+      setNumOfChapters(chapterData)
+    } catch (err) {
+      console.error(`Error in fetch: ${err.message}`)
+    }
+  }
+
   useEffect(() => {
-    fetchData()
+    fetchChapterData()
+    fetchChapterListData()
   }, [])
 
   const chapterPages = chapter.pages.map((page) => {
       return {page_number: page.page_number, page_url: page.page_url}
   })
 
+  
   return (
-    <div>
       <PageTile pages={chapterPages}
                 pathName={props.location.pathname}
                 hash={props.location.hash}
                 totalPages={chapter.total_pages}
-                // pageSave={handlePageSave()}
+                numOfChapters={numOfChapters}
+                chapter_num={chapter.chapter_number}
                 />
-    </div>
   )
 }
 

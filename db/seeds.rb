@@ -69,4 +69,79 @@ chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "
     Page.create(page_number: "51", page_url: "https://cm.blazefast.co/dc/16/dc161515a2e934d9582c928443974d76.jpg", chapter_id: chapter.id)
     Page.create(page_number: "52", page_url: "https://cm.blazefast.co/32/de/32de3534b699b8d979a4a42d6fb8ce78.jpg", chapter_id: chapter.id)
     Page.create(page_number: "53", page_url: "https://cm.blazefast.co/9d/5a/9d5afda02d000091f4152ea610af9dce.jpg", chapter_id: chapter.id)
-# Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "53", pages: '{1: "https://cm.blazefast.co/35/c3/35c3f91e63e3e61e9530aede9447edcb.jpg", 2: "https://cm.blazefast.co/6e/35/6e35a321528be0e52608711583ab317e.jpg", 3: "https://cm.blazefast.co/4f/c1/4fc1568d9762b017ab73caabed3b1c77.jpg"}', comic_id: comic.id)
+
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+
+    Page.create(page_number: "1", page_url: "http://cm.blazefast.co/2e/ea/2eeab195b6a26f8bfae825259e998138.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "http://cm.blazefast.co/31/1d/311dc632f26386a2c52f7e29dc6e946a.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "http://cm.blazefast.co/12/da/12da24bcc395fa5ce279bb170be4d44b.jpg", chapter_id: chapter.id)
+
+    comic = Comic.create(name: "One-Piece",
+                     description: "I am going to be king of the pirates!",
+                     author: "idk",
+                     genres: "Shonnen",
+                     photo_url: "https://covers2.booksamillion.com/covers/bam/1/56/931/901/1569319014_b.jpg",
+                     total_rating: "0",
+                     total_votes: "0")
+
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id) 
+
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/59/08/5908edc1d1a8d5b5ff1e165b11dafa1c.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/af/c3/afc35a0393b58af1db2c66c30c75387c.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/71/71/7171f0f9b99b5333fb58378d51ac054d.jpg", chapter_id: chapter.id)
+    
+    comic = Comic.create(name: "Bleach",
+                     description: "I honestly have no idea what the show is about",
+                     author: "idk",
+                     genres: "Shonnen",
+                     photo_url: "https://images-na.ssl-images-amazon.com/images/I/516WLV8lFCL._SX331_BO1,204,203,200_.jpg",
+                     total_rating: "0",
+                     total_votes: "0")
+
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id) 
+
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/a6/6f/a66f5bef9929d628366747a67b8e66c1.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/8e/09/8e095e91c927464fa9dc6c1a2aff35d1.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/44/87/44875e08de836868194246f59ed1c9ef.jpg", chapter_id: chapter.id)
+    
+    comic = Comic.create(name: "Fairy-Tail",
+                     description: "I honestly have no idea what the show is about",
+                     author: "idk",
+                     genres: "Shonnen",
+                     photo_url: "https://images-na.ssl-images-amazon.com/images/I/91tWNPt9AQL.jpg",
+                     total_rating: "0",
+                     total_votes: "0")
+
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id) 
+
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/e8/26/e826313ea667c4f5bb34a3ba47e2fc15.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/e8/13/e813e2002b5dac1aaf496ff1a8412748.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/f1/2b/f12bf5c641fc1ed350d70f65b6d59373.jpg", chapter_id: chapter.id)
+    
+    comic = Comic.create(name: "Berserk",
+                     description: "How far one man would go to forsake his humanity to protect the ones he loves",
+                     author: "idk",
+                     genres: "Shonnen",
+                     photo_url: "https://cm.blazefast.co/25/40/2540570213de16b9fbcdd87532159d87.jpg",
+                     total_rating: "0",
+                     total_votes: "0")
+
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id) 
+
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/25/40/2540570213de16b9fbcdd87532159d87.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/19/06/1906413d33fc22ff8cbf57c2b7ef7bd3.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/6a/a7/6aa78d348410b428708102d90529d436.jpg", chapter_id: chapter.id)
+
+    comic = Comic.create(name: "Attack-on-Titan",
+                     description: "Everyone get eaten",
+                     author: "idk",
+                     genres: "Shonnen",
+                     photo_url: "https://cm.blazefast.co/dc/65/dc65750418b3a8e13bb3f9060a853450.jpg",
+                     total_rating: "0",
+                     total_votes: "0")
+
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id) 
+
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/dc/65/dc65750418b3a8e13bb3f9060a853450.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/4b/39/4b39071e3d7857386fff66afbcf95934.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/fc/03/fc0390b3eb54e6683438305574aa0bff.jpg", chapter_id: chapter.id)

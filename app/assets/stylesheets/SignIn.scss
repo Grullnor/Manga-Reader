@@ -1,0 +1,103 @@
+// .sign-in-wrapper{
+//     color: white;
+//     // display: inline-block;
+//     // margin-left: 10%;
+//     // margin-bottom: 20px;
+// }
+
+// form {
+//     width: 80%;
+//     margin: 0 auto;
+//     color: white;
+//   }
+  
+//   label,
+//   input {
+//     /* In order to define widths */
+//     display: inline-block;
+//   }
+  
+//   label {
+//     width: 30%;
+//     /* Positions the label text beside the input */
+//     text-align: left;
+//   }
+  
+//   label+input {
+//     width: 30%;
+//     /* Large margin-right to force the next element to the new-line
+//              and margin-left to create a gutter between the label and input */
+//     margin: 0 30% 0 4%;
+//   }
+  
+  
+//   /* Only the submit button is matched by this selector,
+//          but to be sure you could use an id or class for that button */
+  
+//   input+input {
+//     float: right;
+//   }
+
+// // .form-wrapper{
+// //     display: block;
+// //     align-items: center;
+
+// // }
+
+// // .field{
+// //     width: 500px;
+// //     // margin-left: 33%;
+// // }
+
+// .field label{
+//     color: white;
+// }
+
+.sign-in-up-container {
+    width: 500px;
+    margin: 70px auto;
+    padding: 30px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(63, 63, 55, .10);
+    background-color: #4d4d4d;
+  }
+  
+  .main-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .field label {
+    font-size: 1em;
+    margin-bottom: 3px;
+  }
+  
+  .field input {
+    border-radius: 5px;
+  }
+  
+  .field em {
+    font-size: .8em;
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  .actions input {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 8px 14px;
+    margin-top: 10px;
+  }
+  
+  .actions input:hover {
+    cursor: pointer;
+    opacity: 85%;
+  }

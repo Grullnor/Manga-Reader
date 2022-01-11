@@ -6,7 +6,7 @@ const ComicIndexContainer = (props) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/v1/comics")
+      const response = await fetch(`/api/v1/comics${window.location.search}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
@@ -33,8 +33,13 @@ const ComicIndexContainer = (props) => {
   })
 
   return (
-    <div>
-      {comicTiles}
+    <div className="comic-tiles">
+      <div className="comic-tiles-header">
+        <p className="comic-tiles-header-text"> Series </p>
+      </div>
+      <div className="comic-tiles-container">
+        {comicTiles}
+      </div>
     </div>
   )
 }

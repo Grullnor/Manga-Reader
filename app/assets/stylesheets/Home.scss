@@ -1,0 +1,39 @@
+.header {
+    text-align: center;
+    color: rgb(235, 200, 2);
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: rgb(235, 200, 2);
+    text-decoration: underline;
+}
+
+.button-container{
+    display: flex;
+    padding: 0;
+    margin: 20px;
+    margin-left: 25%;
+    width: 50%;
+    justify-content: center;
+}
+
+.button-box{
+    display: inline-block;
+    text-align: center;
+    padding: 80px 0;
+    width: 200px;
+    height: 200px;
+    font-size: 20pt;
+    background-color: black;
+    border-radius: 5%;
+    color:white;
+    margin: 15px;
+}
+
+.button-box:hover{
+    transition: all 0.2s linear 0s;
+    background-color: rgb(235, 200, 2);
+    color: black;
+}
