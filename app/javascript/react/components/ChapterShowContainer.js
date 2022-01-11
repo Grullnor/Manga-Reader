@@ -18,6 +18,8 @@ const ChapterShowContainer = (props) => {
     }
   )
 
+  let switchChapter = 0
+
   const fetchChapterData = async () => {
     try {
       const response = await fetch(`/api/v1/chapters/${props.match.params.name}?chapter=${props.match.params.id}`)
@@ -51,12 +53,15 @@ const ChapterShowContainer = (props) => {
   useEffect(() => {
     fetchChapterData()
     fetchChapterListData()
-  }, [])
+  }, [switchChapter])
 
   const chapterPages = chapter.pages.map((page) => {
       return {page_number: page.page_number, page_url: page.page_url}
   })
 
+  let nextChapter = () =>{
+    switchChapter += 1 
+  }
   
   return (
       <PageTile pages={chapterPages}
@@ -65,6 +70,7 @@ const ChapterShowContainer = (props) => {
                 totalPages={chapter.total_pages}
                 numOfChapters={numOfChapters}
                 chapter_num={chapter.chapter_number}
+                nextChapter={nextChapter()}
                 />
   )
 }

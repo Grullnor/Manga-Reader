@@ -9,6 +9,7 @@ const ComicShowContainer = (props) => {
       author: "",
       genres: "",
       photo_url: "",
+      release_year: "",
       chapters: []
   })
 
@@ -49,9 +50,10 @@ const ComicShowContainer = (props) => {
         <div className="comic-show">
           <img className="comic-show-photo" src={comic.photo_url} />
           <ul className="comic-show-info">
-            <li>Series name: {displayName}</li>
-            <li>Author: {comic.author}</li>
-            <li>Genres: {comic.genres}</li>
+            <li>Series name: {displayName}</li><br/>
+            <li>Author: {comic.author}</li><br/>
+            <li>Year of release: {comic.release_year}</li><br/>
+            <li>Genres: {comic.genres}</li><br/>
             <li>Description: {comic.description}</li>
           </ul>
         </div>

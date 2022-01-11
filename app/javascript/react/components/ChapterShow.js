@@ -13,11 +13,11 @@ const PageTile = (props) => {
   const totalPages = props.totalPages
   const pageToDisplay = parseInt(props.hash.replace('#page_', '')) - 1
   const nextURL = URL.concat('#page_', (pageToDisplay + 2).toString())
-  const thisURL = URL.concat('#page_', (currentPage).toString())
   const prevURL = URL.concat('#page_', (pageToDisplay).toString())
 
   let pageInfo = window.location.pathname.split('/')
   let name = pageInfo[2].replaceAll('-', ' ')
+  let currentChapterInt = parseInt(pageInfo[3])
 
   useEffect(() => {
     if(pages.length > 1) {
@@ -68,13 +68,20 @@ const PageTile = (props) => {
     window.location.href=event.target.value
   }
 
+  const nextChapter = event => {
+    props.nextChapter()
+  }
+
   let prevLink
   let nextLink
+  const nextChapterUrl = `/${pageInfo[1]}/${pageInfo[2]}/${parseInt(pageInfo[3]) + 1}#page_1`
   if(page.page_number > 1){
     prevLink = <Link className='prenext' to={prevURL} onClick={prevPage}>Prev</Link>
   }
   if(parseInt(page.page_number) < parseInt(totalPages)){
     nextLink = <Link className='prenext' to={nextURL} onClick={nextPage}>Next</Link>
+  } else if(currentChapterInt < props.numOfChapters) {
+    nextLink = <Link className='prenext' to={nextChapterUrl} onClick={nextChapter}>Next</Link>
   }
 
   let prevBox
@@ -84,6 +91,8 @@ const PageTile = (props) => {
   }
   if(parseInt(page.page_number) < parseInt(totalPages)){
     nextBox = <Link className='img-container next' to={nextURL} onClick={nextPage}/>
+  } else if(currentChapterInt < props.numOfChapters) {
+    nextBox = <Link className='img-container next' to={nextChapterUrl} onClick={nextChapter}></Link>
   }
   
   useEffect(() => {
