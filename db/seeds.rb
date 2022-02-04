@@ -593,3 +593,312 @@ Page.create(page_number: "1", page_url: "https://cm.blazefast.co/59/d1/59d124914
     Page.create(page_number: "2", page_url: "https://cm.blazefast.co/5c/59/5c59bf1b1eb1b55262a2e8c264e04095.jpg", chapter_id: chapter.id)
     Page.create(page_number: "3", page_url: "https://cm.blazefast.co/a1/1e/a11e5a8b82191242a04fbf3d32c80314.jpg", chapter_id: chapter.id)
 
+
+
+comic = Comic.create(name: "Nana",
+                         description: "A girl from a small town named Nana Komatsu moves to Tokyo to accompany her boyfriend and college friends. She's there in search of the life of her dreams. The story follows their friendship and lives and they each persue their dreams.",
+                         author: "Ai Yazawa",
+                         release_year: "2000",
+                         genres: "Drama, Comedy, Romance",
+                         photo_url: "https://images-na.ssl-images-amazon.com/images/I/91oVrDoEg4L.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/4d/a2/4da241f3e895336360528b3c4267820a.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/61/e8/61e8a4dc4cca0fbdbcc148b5c5f096ba.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/f1/8a/f18a589822113b588ce0568434219085.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/28/9f/289fc5450457d570d65b222e992b0c4f.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/0b/34/0b34d1b9cda22905f6e7ef7bc73bc06f.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/e8/44/e8448722e90230db8fa5d308559e71db.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/23/30/2330745ac94758612248df21087922aa.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "2", page_url: "https://cm.blazefast.co/75/05/75056ab316e8dcdd8a7eb066b8188122.jpg", chapter_id: chapter.id)
+    Page.create(page_number: "3", page_url: "https://cm.blazefast.co/46/4b/464b32828cd754d8c852cebdf23a7053.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+        
+    comic = Comic.create(name: "Banana Fish",
+                         description: "Taking place in 1980's New York, a young runaway named Ash Lynx attempts to bring down the crime boss Dino Golzine. He takes off on a chaotic, uncertain journey investigating the mysterious 'Banana Fish'. Through dealing with the dangers of the gang wars and back alley deals, Ash manages to befriend a Japanese photographer his friend Skip introduced him to, Eiji Okumura. After Dino's men kidnap his two friends, Ash must set out to rescue them as well as continue investigating the 'Banana Fish'.",
+                         author: "Akimi Yoshida",
+                         release_year: "1985",
+                         genres: "Drama, Action, Tragedy",
+                         photo_url: "https://mangareader.tv/mangaimage/manga-li960265.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/db/30/db30f058414819ead13b46b4092d7b95.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/df/77/df775288cd1e496a5a8b4c55e9f726ea.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/41/84/41846af93057d9a1e7fc755223cc9b16.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/e0/46/e04683df36a0bdd67c3650e534fa0344.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/ee/de/eede4d74af8b7c0b17a7feb52f72d3f9.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/de/a9/dea90800206ea5ff172040bc0494c568.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/0f/ae/0fae306dc92e0b331e91a74b8f1c1340.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/43/83/438310e779f906834def99c45508a1e8.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/8e/f1/8ef12ef00a80b0035739a9308fe43aa1.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    
+    
+    comic = Comic.create(name: "Toilet-bound Hanako-kun",
+                         description: "Its rumored that at Kamome Academy Hanako-San, one of the schools Seven Wonders, is said to occupy the third stall of the third floor girls' bathroom, and grants any wish when summoned. A high school student named Nene Yashiro seeks use this to fulfill her dreams of romance. But what she finds is not what she could have imagined, the rumored girl is actually a boy! Not long after, Nene involuntarily gets pulled into the world of supernatural in becoming Hanako-kun's assistant.",
+                         author: "Aidalro",
+                         release_year: "2015",
+                         genres: "Comedy, Drama, Shounen",
+                         photo_url: "https://cm.blazefast.co/7c/5f/7c5ff08ed616d4c26c5ae248118870f6.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/a1/b8/a1b81cde4198289d8f8cab517e24b2c0.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/7f/5f/7f5f308501e1c5b774c1dc9e42279bfe.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/85/b7/85b7107846bf9024ee052e1a68d41fbb.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/e8/68/e86873e2a67a343d723e0de06d9e6454.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/e1/97/e197946615e683a877bf2d808259d20b.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/8a/f6/8af644584d71c843b03a9581ca891c79.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/64/f8/64f840b0b21b5cfc5be86da2d6d8bb88.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/f6/fb/f6fbc55356dcc8c8b1265429beac5797.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/46/19/461924f61eee269ba22b835aae00b8c4.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    
+    
+    comic = Comic.create(name: "Blue Lock",
+                         description: "When Japan didn't win the FIFA World Cup of 2018, the Japanese Football Union built a facility known as Blue Lock. This place was designated to train players in order to secure Japan's victory in the World Cup. This story follows Yoichi Isagi, lower in the rankings of the three hundred boys chosen for the camp, but he's still aiming for the top. The most difficult part, anyone disqualified will never be able to represent Japan.",
+                         author: "Muneyuki Kaneshiro",
+                         release_year: "2018",
+                         genres: "Sports, Action, Drama",
+                         photo_url: "https://cm.blazefast.co/85/15/85154e75d51ffab212fb3a40837c65e2.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/90/0e/900e146c7d1c4874f3557a01c665c32f.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/7a/c9/7ac9bf4eedb7d7d18789c43d90c413d9.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/da/32/da32190c460a24d06856db1214e1d16f.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/e3/bb/e3bbd0656891af41f65a29de46e66c18.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/42/ea/42eaa0129396b12a7246d068b65dd9ca.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/9d/04/9d049c07a3faa43b717313730aa84085.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/a6/ba/a6ba459ad40242abbc23277ea3d73533.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/93/98/9398a929b68376abe665014e15b3109c.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/ea/3c/ea3c72d61f7d3326cfe15f95c809d9f2.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    
+    comic = Comic.create(name: "Doraemon",
+                         description: "Doraemon is an earless robotic cat from the future. He travels way back to the twentieth century with the task of helping Nobi Nobita. Nobi is a lazy young kid who doesn't have a whole lot going for him, he struggles with his grades, sports and even leisure games. Doraemon is determined to help him, even though the robot isn't the best with his gadgets and they both end up getting into lots of trouble because of it. But their adventures and friendship makes it an enjoyable time nonetheless.",
+                         author: "Fujiko F. Fujio",
+                         release_year: "1970",
+                         genres: "Comedy, Adventure, Slice of Life",
+                         photo_url: "https://mangareader.tv/mangaimage/manga-os952775.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/5d/f9/5df925d9cfdb7c76b1c134daf59d8204.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/e5/1c/e51cb706e84a8fe6bd5ac1af73364504.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/6d/06/6d068a7c1c5842a5af41e850ce430abe.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/07/5a/075af79a62118f5ab5085b56298b0a95.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/18/54/1854a1dff4bc7541bb14e2a4ccb7500f.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/64/33/6433f85a0489e38e0b4ee9c2a2e61aa7.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/5b/36/5b36534777cf7f411419dbb1fd8c5d0c.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/c7/56/c7565e61f311781677dd72bebdb3525b.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/38/0f/380fe6998ffa66f0a64fe5cea9be35ad.jpg", chapter_id: chapter.id)
+    
+    
+    
+    ###################
+
+    
+    
+    comic = Comic.create(name: "Durarara!!",
+                         description: "In the streets of Ikebukuro, the legend of a headless 'Black Rider' stands out among the rest, said to be driving a jet-black motorcycle through the city. Mikado Ryuugamine moves to Ikebukuro, chasing the excitement of the city. On only his first day in the big city he encounters the Black Rider, and soon after begins getting entangled in the supernatural events and havoc happening in the city. Many of the strange persons he encountered on his first days in the city start to cross his path as their stories unexpectedly intertwine",
+                         author: "Ryohgo Narita",
+                         release_year: "2009",
+                         genres: "Mystery, Supernatural, Fantasy",
+                         photo_url: "https://mangareader.tv/mangaimage/manga-ss955853.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/2d/76/2d7672f7b66efb857c9acc6cc79b1372.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/36/70/36701c1de7b23e53d611ded3c6f01b0e.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/12/cc/12cc2c248725c2dd3c8cc5f1a2964689.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/46/93/4693d398a84bb3298ccf5394579c66c3.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/fe/29/fe2952e95e6dffd8d6fa4c5f4110d9c0.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/87/a6/87a6521a4ffc0c4f2d5f435e1b05f3e5.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/45/6f/456fd8634d9f0f941b6f5481dff0c881.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/e8/39/e839cf9149fbde4c2b321eac0643145a.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/22/94/22945cc9d61fc390d17db970a8403632.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    comic = Comic.create(name: "Wotakoi: Love is Hard for Otaku",
+                         description: "Momose Narumi recently changed jobs and is trying to portray herself as a beautiful young lady, when in reality she's a huge fangirling geek. Her hopes are soon destroyed when she reconnects with an old friend from middle school named Nifuji Hirotaka, a gamer nerd who is more than aware of her secret.",
+                         author: "Fujita",
+                         release_year: "2015",
+                         genres: "Comedy, Slice of Life, Romance",
+                         photo_url: "https://images-na.ssl-images-amazon.com/images/I/81wIsIPiL5L.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/fd/e9/fde9114f35bd940e242b0de86a24feb4.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/c3/0c/c30cfa5a1838d6db37d81ca3a4e57e94.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/68/34/6834069136f5d03483c1ab4201df6af5.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/dd/e8/dde87a6df28c04a7349857eee8b7f600.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/f4/8e/f48e9f0c238184d750093723544b194f.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/d2/6c/d26c1b4a539ffec37d6a7aefdd0eca81.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/3e/fc/3efc29609a9c8952639390115dfbd4cf.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/5c/e9/5ce95c0b508fba00c9436fea502f6f0d.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/20/e4/20e46b2e302ac6ae262d2c9048cfd5ae.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+
+    
+    
+    comic = Comic.create(name: "Hellsing",
+                         description: "This story follows an organization named Hellsing. Their objective is to find and destroy the undead as well as other evil supernatural forces that could be of threat to the queen or the country.",
+                         author: "Kohta Hirano",
+                         release_year: "1997",
+                         genres: "Supernatural, Action, Horror",
+                         photo_url: "https://cm.blazefast.co/e9/7e/e97e293db033c80284faa549cca95b06.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/96/7e/967e4be8810eb2d346fec5f6617c0f94.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/a1/c4/a1c4ee35bd8f89bcb8547a1a847ef024.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/30/c1/30c174967aa023c7e31b1df6fb589a73.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/35/72/357271f856f423ad9e89029cb50ddbce.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/cd/00/cd00c2672118ce7d406fdc0fd69c3857.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/73/e6/73e64f8c3b717aa2940c13596f84bc75.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/91/ad/91add682c0115707b1ae414d883d4a88.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/aa/a1/aaa197dbba7e79d983fad4b8b7a33755.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/fb/aa/fbaaf04e41a8624a1944d0feddf47444.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    
+    comic = Comic.create(name: "Black Lagoon",
+                         description: "Follow the life of an average Japanese man named Rokurou Okajima, as he goes from businessman to ruthless mercenary. His trip to Southeast Asia goes awry when he gets captured by a mercenary group in Roanapur. This group, called Black Lagoon, intends to use him as a bargaining chip in their negotiations, which wasn't successful. No longer being able to work for his former employer, Rokurou makes the decision to join Black Lagoon and learn to adapt in order to stay alive in this new and treacherous environment.",
+                         author: "Rei Hiroe",
+                         release_year: "2002",
+                         genres: "Comedy, Action, Drama",
+                         photo_url: "https://mangareader.tv/mangaimage/manga-kj960192.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/cd/75/cd751b5113d1f839aac0bdb4bce29958.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/28/de/28dec47d8051854d823b3fff0fae789b.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/b7/45/b74507726dea37c534a7ce66e57833fd.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/fb/40/fb40a3c6247df86cb419d7625d8b1360.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/6f/0c/6f0cb8b42abe8346c9aa0ec8a88ce851.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/48/6e/486ebc5e7088182de6c02d6b671d014c.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/15/a0/15a0936d1a8dd80578532fd9107b3daf.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/64/f0/64f0221c5e1fd665664444b347f29452.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/de/f9/def9d401e5b393749c9bda3cee420b22.jpg", chapter_id: chapter.id)
+    
+    
+    ###################
+    
+    
+    
+    comic = Comic.create(name: "My Love Story!!",
+                         description: "Takeo Gouda is not the most average high schooler, having a muscular build, tall stature and intimidating appearence. However, underneath he has a kind and couragous heart. Unfortunetly no matter how hard he tries he doesn't have luck with women because his cool and handsome best friend steals the spotlight and all the women he falls for. After he saves Rinko Yamato, he falls for her but suspects that she must only be interested in his friend. So, he decideds to help her, even if it means pushing aside his own wishes for a love story.",
+                         author: "Kazune Kawahara",
+                         release_year: "2011",
+                         genres: "Slice of Life, Comedy, Romance",
+                         photo_url: "https://images-na.ssl-images-amazon.com/images/I/81vQFwhRqmL.jpg",
+                         total_rating: "0",
+                         total_votes: "0")
+    
+    chapter = Chapter.create(title: "Chapter 1", chapter_number: "1", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/dd/18/dd18befd89e9cee1063f311f2f85220b.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/d6/f2/d6f2cfca41e73fe3201959def4940f11.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/1b/f0/1bf0724d3d72cc012d9936e21b43ebab.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 2", chapter_number: "2", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/74/f3/74f35f2b80f8f7b7e1bc992daf2e43a1.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/99/49/99496864b060403ccf53c7ce5856b37a.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/5a/42/5a42de3a73499b09fa37b481ced683dd.jpg", chapter_id: chapter.id)
+    
+    
+    chapter = Chapter.create(title: "Chapter 3", chapter_number: "3", total_pages: "3", comic_id: comic.id)
+    Page.create(page_number: "1", page_url: "https://cm.blazefast.co/25/29/2529009f4dcda72b7f1471fc1f33da1e.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "2", page_url: "https://cm.blazefast.co/b1/f9/b1f942b204140b3e29615afd8634c686.jpg", chapter_id: chapter.id)
+        Page.create(page_number: "3", page_url: "https://cm.blazefast.co/28/83/2883f8a1994beaae98455ccf62d730ee.jpg", chapter_id: chapter.id)
+    
+    
