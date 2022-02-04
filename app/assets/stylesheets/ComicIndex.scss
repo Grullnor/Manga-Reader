@@ -54,6 +54,9 @@
 }
 
 .comic-photo-text {
+    width: 150px;
+    margin-left: 10px;
+    flex-wrap: wrap;
     text-align: center;
     font-size: 11pt;
     color: white;
