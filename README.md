@@ -1,18 +1,16 @@
+# Manga-Reader
+
 # How to Use Me
 
-Assuming you are starting an app that you wish to call `rescue-mission` 
 
 In your terminal:
 
 ```
-git clone https://github.com/LaunchAcademy/rails-6-boilerplate
-cd rails-6-boilerplate 
+git clone https://github.com/Grullnor/Manga-Reader
+cd Manga-Reader
 bundle
 yarn install
+rails s
 ```
 
-If you prefer, **you can rename your project with the `mv` command.**
-
-Starting from the directory above your app (likely challenges):
-mv <source_directory> <target_directory>
-# Manga-Reader
+When the server has started, navigate to localhost:3000 on your web browser of choice
